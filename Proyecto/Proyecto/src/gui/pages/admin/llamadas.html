@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejecutivos - Call Flash</title>
+  <link rel="stylesheet" href="../../css/admin/scrollbar.css">
+  <link rel="stylesheet" href="../../css/admin/llamadas.css">
+  <!-- Script de QWebChannel para PyQt5 -->
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+  <script src="../../js/admin/llamadas.js"></script>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      <h2>Llamadas</h2>
+    </div>
+
+    <!-- 🔍 Filtros -->
+    <div class="buscador-llamada">
+      <input type="number" id="id_llamada" placeholder="Buscar por ID de llamada">
+      <button onclick="buscarLlamada()">Buscar</button>
+    </div>
+    <div id="tabla-llamadas">
+      <table class="tabla-llamadas">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+
+</html>

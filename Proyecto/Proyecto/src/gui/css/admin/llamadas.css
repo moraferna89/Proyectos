@@ -1,0 +1,200 @@
+/* ===== HTML y Body ocupan toda la altura ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: radial-gradient(circle at top left, #3f3f3f, #8b8b8b);
+  color: #fff;
+  justify-content: center; /* centra verticalmente */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Card principal ===== */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #181818, #7a7a7a);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  width: 100%;
+  max-width: 1200px;
+  height: calc(100vh - 40px);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease forwards; /* ✨ efecto */
+}
+
+/* ===== Header del card ===== */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.card-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ===== Filtros y buscador ===== */
+.buscador-llamada, .subir-audio {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.buscador-llamada input, .subir-audio input {
+  width: 220px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+  background: #494949;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.buscador-llamada input:focus, .subir-audio input:focus {
+  outline: none;
+  background: #252525;
+  border: 1px solid #acacac;
+}
+
+.buscador-llamada button, .subir-audio button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #a0a0a0, #585858);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buscador-llamada button:hover, .subir-audio button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #afafaf, #8f8f8f);
+}
+
+.buscador-llamada button:active, .subir-audio button:active {
+  transform: scale(0.97);
+}
+
+/* ===== Contenedor de la tabla ocupa todo el espacio restante ===== */
+#tabla-llamadas {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: 15px;
+  background: #272727;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+/* ===== Tabla moderna ===== */
+.tabla-llamadas {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+}
+
+.tabla-llamadas thead {
+  background: linear-gradient(135deg, #8b8b8b, #585858);
+  color: #fff;
+  font-weight: 700;
+}
+
+.tabla-llamadas th, .tabla-llamadas td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.tabla-llamadas tbody tr {
+  background: #3b3b3b;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.tabla-llamadas tbody tr:nth-child(even) {
+  background: #313131;
+}
+
+.tabla-llamadas tbody tr:hover {
+  background: #313131;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(170, 170, 170, 0.3);
+}
+
+/* ===== Botón "Ver Detalles" dentro de la tabla ===== */
+.ver-detalles {
+  background: linear-gradient(135deg, #a0a0a0, #585858);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 6px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(5, 5, 5, 0.5);
+}
+
+.ver-detalles:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(5, 5, 5, 0.5);
+  background: linear-gradient(135deg, #bbbbbb, #8f8f8f);
+}
+
+.ver-detalles:active {
+  transform: scale(0.95);
+  background: linear-gradient(135deg, #b3b3b3, #8f8f8f);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 1000px) {
+  .card {
+    padding: 15px;
+    height: auto;
+  }
+  .buscador-llamada button, .subir-audio button {
+    padding: 6px 12px;
+  }
+  .buscador-llamada input, .subir-audio input {
+    width: 160px;
+  }
+}
+
+.estrella {
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+.estrella.llena {
+    color: #FFD700; /* amarillo dorado */
+}
+
+.estrella.vacia {
+    color: #CCC; /* gris */
+}
+
+/* ✨ Animaciones */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

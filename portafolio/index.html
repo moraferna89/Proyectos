@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Portafolio FMG</title>
+
+</head>
+
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+
+      <!-- Media: video o imagen principal -->
+      <div class="modal-media">
+        <div class="modal-video-wrap" id="modalMedia">
+          <!-- Se rellena con JS -->
+        </div>
+        <!-- Tira de miniaturas -->
+        <div class="modal-thumbs" id="modalThumbs"></div>
+      </div>
+
+      <!-- Contenido -->
+      <div class="modal-body">
+        <div class="modal-header">
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <div class="modal-meta">
+            <span class="modal-type" id="modalType"></span>
+            <span class="modal-year" id="modalYear"></span>
+          </div>
+        </div>
+
+        <p class="modal-desc" id="modalDesc"></p>
+
+        <div class="modal-section-label">Stack</div>
+        <div class="modal-tags" id="modalTags"></div>
+
+        <div class="modal-section-label" style="margin-top:28px;">Links</div>
+        <div class="modal-links" id="modalLinks"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-logo">FMG</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta nav-cta-desktop">Hablemos →</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#projects" class="mobile-menu-link">Proyectos</a>
+    <a href="#stack" class="mobile-menu-link">Stack</a>
+    <a href="#contact" class="mobile-menu-link">Contacto</a>
+    <a href="#contact" class="btn-primary" style="margin-top:8px;text-align:center;">Hablemos →</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <p class="hero-tag fade-up">Disponible para proyectos</p>
+      <h1 class="fade-up">
+        Fullstack<br>
+        <span class="accent">Developer.</span>
+      </h1>
+      <p class="hero-desc fade-up">
+        Enfocado en interfaces limpias, rendimiento
+        y código que tenga sentido de leer después.
+      </p>
+      <div class="hero-actions fade-up">
+        <a href="#projects" class="btn-primary">Ver Proyectos</a>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        SCROLL TO EXPLORE
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-num">9<span>+</span></div>
+      <div class="stat-label">Proyectos</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">3<span>y</span></div>
+      <div class="stat-label">Experiencia</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">28<span>+</span></div>
+      <div class="stat-label">Tecnologías</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100<span>%</span></div>
+      <div class="stat-label">Apto para trabajo remoto</div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Proyectos</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Todo</button>
+      <button class="filter-btn" data-filter="Landing Page">Landing Page</button>
+      <button class="filter-btn" data-filter="Bot">Bot</button>
+      <button class="filter-btn" data-filter="Web App">Web App</button>
+      <button class="filter-btn" data-filter="Desktop App">Desktop App</button>
+    </div>
+
+    <!-- Las cards se generan con JS desde el array PROJECTS -->
+    <div class="projects-grid" id="projectsGrid"></div>
+  </section>
+
+  <div class="full-divider"></div>
+
+  <!-- STACK -->
+  <section id="stack">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Stack</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="stack-grid">
+      <div class="stack-category">
+        <h3>Frontend</h3>
+        <div class="stack-items">
+          <div class="stack-item"><div class="stack-dot"></div>React / Next.js 14</div>
+          <div class="stack-item"><div class="stack-dot"></div>TypeScript</div>
+          <div class="stack-item"><div class="stack-dot"></div>Tailwind CSS</div>
+          <div class="stack-item"><div class="stack-dot"></div>Framer Motion</div>
+          <div class="stack-item"><div class="stack-dot"></div>HTML5 / CSS3</div>
+          <div class="stack-item"><div class="stack-dot"></div>JavaScript Vanilla</div>
+        </div>
+      </div>
+      <div class="stack-category">
+        <h3>Backend</h3>
+        <div class="stack-items">
+          <div class="stack-item"><div class="stack-dot"></div>Python</div>
+          <div class="stack-item"><div class="stack-dot"></div>FastAPI</div>
+          <div class="stack-item"><div class="stack-dot"></div>Node.js</div>
+          <div class="stack-item"><div class="stack-dot"></div>PyQt5 / PyQtWebEngine</div>
+          <div class="stack-item"><div class="stack-dot"></div>PyWebView</div>
+          <div class="stack-item"><div class="stack-dot"></div>APScheduler</div>
+          <div class="stack-item"><div class="stack-dot"></div>Telegram API</div>
+        </div>
+      </div>
+      <div class="stack-category">
+        <h3>IA / Data</h3>
+        <div class="stack-items">
+          <div class="stack-item"><div class="stack-dot"></div>Google Generative AI</div>
+          <div class="stack-item"><div class="stack-dot"></div>AssemblyAI</div>
+          <div class="stack-item"><div class="stack-dot"></div>Google Cloud Language</div>
+          <div class="stack-item"><div class="stack-dot"></div>XGBoost</div>
+          <div class="stack-item"><div class="stack-dot"></div>Scikit-learn</div>
+          <div class="stack-item"><div class="stack-dot"></div>Pandas / NumPy</div>
+          <div class="stack-item"><div class="stack-dot"></div>MetaTrader5</div>
+        </div>
+      </div>
+      <div class="stack-category">
+        <h3>Herramientas</h3>
+        <div class="stack-items">
+          <div class="stack-item"><div class="stack-dot"></div>MySQL / Cloud SQL</div>
+          <div class="stack-item"><div class="stack-dot"></div>ReportLab (PDF)</div>
+          <div class="stack-item"><div class="stack-dot"></div>FFmpeg</div>
+          <div class="stack-item"><div class="stack-dot"></div>Radix UI</div>
+          <div class="stack-item"><div class="stack-dot"></div>Google Maps API</div>
+          <div class="stack-item"><div class="stack-dot"></div>WhatsApp API</div>
+          <div class="stack-item"><div class="stack-dot"></div>Font Awesome</div>
+          <div class="stack-item"><div class="stack-dot"></div>Vercel</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="full-divider"></div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <h2>Convirtiendo<br>ideas en <span class="accent">realidad.</span></h2>
+        <p>
+          Abierto a proyectos freelance o roles full-time.
+        </p>
+        <a href="mailto:hello@dev.io" class="contact-email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          moraferna89@gmail.com
+        </a>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/fernando-morales-gallardo-a007a0259/" class="social-link">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <div class="contact-item">
+          <span class="contact-item-label">Estado</span>
+          <span class="contact-item-value" style="color:#4ade80;display:flex;align-items:center;gap:8px;">
+            <span
+              style="width:7px;height:7px;border-radius:50%;background:#4ade80;display:inline-block;box-shadow:0 0 8px #4ade80;"></span>
+            Disponible
+          </span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-label">Ubicación</span>
+          <span class="contact-item-value">Chile · GMT-4</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-label">Respuesta</span>
+          <span class="contact-item-value">~12 horas</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-label">Idiomas</span>
+          <span class="contact-item-value">ES / EN</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="full-divider"></div>
+  <footer>
+    <div class="footer-copy">© 2026 — Todos los derechos reservados</div>
+    <div class="footer-built">Built with <span>HTML · CSS · JS</span></div>
+  </footer>
+
+  <script>
+    /* ═══════════════════════════════════════════════
+       DATOS DE PROYECTOS — rellena cada campo
+       ═══════════════════════════════════════════════
+
+       thumb   : ruta a la imagen de la card  (ej. 'assets/projects/bar/thumb.jpg')
+       images  : array de rutas para el carrusel del modal
+       video   : ruta a .mp4 local  O  URL de YouTube/Loom (embed)
+                 Ejemplos:
+                   local  → 'assets/projects/bar/demo.mp4'
+                   youtube → 'https://www.youtube.com/embed/ID'
+                   loom   → 'https://www.loom.com/embed/ID'
+                 Deja '' si no tienes video.
+    ═══════════════════════════════════════════════ */
+    const PROJECTS = [
+      {
+        id: 'bar',
+        name: 'Bar',
+        type: 'Landing Page',
+        year: '2025',
+        desc: 'Landing page premium para bar/restaurante. Navegación suave, hero section animado, galería de productos y contacto directo. Diseño moderno enfocado en conversión.',
+        tags: ['Next.js 14', 'React 18', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Radix UI'],
+        thumb: 'assets/bar/bar.png',
+        images: ['assets/bar/bar.png'],
+        video: '',
+        links: { demo: '', github: '' }
+      },
+      {
+        id: 'golsignal',
+        name: 'GolSignal',
+        type: ['Bot', 'Desktop App'],
+        year: '2025',
+        desc: 'Bot de apuestas deportivas con interfaz visual desktop. Analiza eventos en tiempo real usando IA (Google Generative AI) y envía señales de trading directamente a Telegram.',
+        tags: ['Python', 'FastAPI', 'PyWebView', 'Google Generative AI', 'APScheduler', 'Telegram API', 'Uvicorn'],
+        thumb: 'assets/golsignal/golsignal.png',
+        images: ['assets/golsignal/golsignal.png'],
+        video: '',
+        links: { demo: '', github: '' }
+      },
+      {
+        id: 'bots',
+        name: 'Bots Trading',
+        type: ['Bot', 'Desktop App'],
+        year: '2025',
+        desc: 'Sistema de trading algorítmico con dos módulos: entrenamiento de modelos ML con datos de MetaTrader5 y ejecución de predicciones en vivo. Dashboard para monitoreo en tiempo real.',
+        tags: ['Python', 'MetaTrader5', 'XGBoost', 'Scikit-learn', 'Pandas', 'NumPy', 'Joblib'],
+        thumb: 'assets/bottrading/bottrading.png',
+        images: ['assets/bottrading/bottrading.png'],
+        video: '',
+        links: { demo: '', github: '' }
+      },
+      {
+        id: 'floreria',
+        name: 'Florería',
+        type: 'Landing Page',
+        year: '2025',
+        desc: 'Landing comercial para florería artesanal. Portafolio de arreglos, galería interactiva con lightbox, sección de testimonios y CTA directo a WhatsApp para pedidos.',
+        tags: ['HTML5', 'CSS3', 'JavaScript', 'Scroll Animations', 'WhatsApp API'],
+        thumb: 'assets/floreria/floreria.png',
+        images: ['assets/floreria/floreria.png'],
+        video: '',
+        links: { demo: '', github: '' }
+      },
+      {
+        id: 'jabones',
+        name: 'Jabones Artesanales',
+        type: 'Landing Page',
+        year: '2025',
+        desc: 'Tienda online de jabones artesanales. Catálogo de productos, historia de marca, proceso de elaboración con animaciones parallax, beneficios e ingredientes, y contacto por WhatsApp.',
+        tags: ['HTML5', 'CSS3', 'JavaScript', 'Parallax Scrolling', 'Intersection Observer', 'WhatsApp API'],
+        thumb: 'assets/jabones/jabones.png',
+        images: ['assets/jabones/jabones.png'],
+        video: '',
+        links: { demo: '', github: '' }
+      },
+      {
+        id: 'proyecto',
+        name: 'Transcripción IA',
+        type: 'Desktop App',
+        year: '2025',
+        desc: 'Transcripcion de audio a texto con IA. Sube archivos de audio y obtén transcripciones precisas en segundos. Además, función de evaluación de llamadas de ejecutivos de ventas para mejorar su desempeño.',
+        tags: ['—'],
+        thumb: 'assets/transcripcion/transcripcion.png',
+        images: ['assets/transcripcion/transcripcion.png'],
+        video: '',
+        links: { demo: '', github: '' }
+      },
+      {
+        id: 'vet',
+        name: 'Veterinaria Generica',
+        type: 'Web App',
+        year: '2025',
+        desc: 'Landing page para clínica veterinaria. Servicios, equipo médico, galería y formulario de contacto. Diseño profesional para generar confianza en el cliente.',
+        tags: ['—'],
+        thumb: 'assets/vet/vet.png',
+        images: ['assets/vet/vet.png'],
+        video: '',
+        links: { demo: '', github: '' }
+      },
+      {
+        id: 'veterinaria',
+        name: 'Veterinaria Huellas',
+        type: 'Landing Page',
+        year: '2025',
+        desc: 'Landing page para clínica veterinaria. Servicios, equipo médico, galería y formulario de contacto. Animaciones suaves y diseño profesional para generar confianza en el cliente.',
+        tags: ['Next.js 14', 'React 18', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Radix UI'],
+        thumb: 'assets/veterinaria/veterinaria.png',
+        images: ['assets/veterinaria/veterinaria.png'],
+        video: '',
+        links: { demo: '', github: '' }
+      },
+      {
+        id: 'zinfandel',
+        name: 'Zinfandel',
+        type: 'Landing Page',
+        year: '2025',
+        desc: 'Sitio web de restaurante gourmet en viña. Presenta menú, galería de platos, reservas por formulario con integración a WhatsApp, mapa de ubicación y sección de testimonios.',
+        tags: ['HTML5', 'CSS3', 'JavaScript', 'Google Maps API', 'Font Awesome', 'WhatsApp API'],
+        thumb: 'assets/zinfandel/zinfandel.png',
+        images: ['assets/zinfandel/zinfandel.png'],
+        video: '',
+        links: { demo: '', github: '' }
+      },
+    ];
+
+    /* ═══════════════════════════════════════════════
+       RENDER CARDS
+    ═══════════════════════════════════════════════ */
+    function renderCards(filter = 'all') {
+      const grid = document.getElementById('projectsGrid');
+      const list = filter === 'all'
+        ? PROJECTS
+        : PROJECTS.filter(p => [].concat(p.type).includes(filter));
+
+      grid.innerHTML = list.map(p => {
+        const thumbHTML = p.thumb
+          ? `<img src="${p.thumb}" alt="${p.name}" loading="lazy">`
+          : `<div class="card-thumb-placeholder"><span>SIN IMAGEN</span></div>`;
+
+        const hasVideo = !!p.video;
+        const typeLabel = [].concat(p.type).join(' · ');
+
+        return `
+          <div class="project-card" data-id="${p.id}">
+            <div class="card-thumb ${hasVideo ? 'card-has-video' : ''}">${thumbHTML}</div>
+            <div class="card-body">
+              <div class="project-meta">
+                <span class="project-type">${typeLabel}</span>
+                <span class="project-year">${p.year}</span>
+              </div>
+              <div class="project-name">${p.name}</div>
+              <div class="project-desc">${p.desc}</div>
+              <div class="project-tags">
+                ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+
+      // Re-bind clicks
+      grid.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', () => openModal(card.dataset.id));
+      });
+    }
+
+    /* ═══════════════════════════════════════════════
+       MODAL
+    ═══════════════════════════════════════════════ */
+    let activeThumb = 0;
+
+    function openModal(id) {
+      const p = PROJECTS.find(x => x.id === id);
+      if (!p) return;
+
+      document.getElementById('modalTitle').textContent = p.name;
+      document.getElementById('modalType').textContent = [].concat(p.type).join(' · ');
+      document.getElementById('modalYear').textContent = p.year;
+      document.getElementById('modalDesc').textContent = p.desc;
+
+      // Tags
+      document.getElementById('modalTags').innerHTML =
+        p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+      // Links
+      const linksEl = document.getElementById('modalLinks');
+      linksEl.innerHTML = '';
+      if (p.links.demo) {
+        linksEl.innerHTML += `
+          <a href="${p.links.demo}" target="_blank" rel="noopener" class="modal-link primary">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+              <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            Ver Demo
+          </a>`;
+      }
+      if (p.links.github) {
+        linksEl.innerHTML += `
+          <a href="${p.links.github}" target="_blank" rel="noopener" class="modal-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+            </svg>
+            GitHub
+          </a>`;
+      }
+      if (!p.links.demo && !p.links.github) {
+        linksEl.innerHTML = `<span style="font-family:var(--mono);font-size:11px;color:var(--muted2);">SIN LINKS AÚN</span>`;
+      }
+
+      // Media principal + tira de miniaturas
+      buildMedia(p);
+
+      document.body.style.overflow = 'hidden';
+      document.getElementById('modalOverlay').classList.add('open');
+    }
+
+    function buildMedia(p) {
+      const mediaEl = document.getElementById('modalMedia');
+      const thumbsEl = document.getElementById('modalThumbs');
+      activeThumb = 0;
+
+      // Construir lista de medios: video primero, luego imágenes
+      const mediaItems = [];
+      if (p.video) mediaItems.push({ type: 'video', src: p.video });
+      p.images.forEach(src => mediaItems.push({ type: 'image', src }));
+
+      if (mediaItems.length === 0) {
+        mediaEl.innerHTML = `
+          <div class="modal-media-placeholder">
+            <div class="icon">🖼</div>
+            <p>AGREGA IMÁGENES O VIDEO EN EL ARRAY</p>
+          </div>`;
+        thumbsEl.innerHTML = '';
+        return;
+      }
+
+      function showMedia(idx) {
+        activeThumb = idx;
+        const item = mediaItems[idx];
+
+        if (item.type === 'video') {
+          // YouTube / Loom embed
+          if (item.src.includes('youtube.com') || item.src.includes('youtu.be') || item.src.includes('loom.com')) {
+            mediaEl.innerHTML = `<iframe src="${item.src}" allowfullscreen></iframe>`;
+          } else {
+            // Video local
+            mediaEl.innerHTML = `<video src="${item.src}" controls autoplay muted loop playsinline></video>`;
+          }
+        } else {
+          mediaEl.innerHTML = `<img src="${item.src}" alt="screenshot">`;
+        }
+
+        // Actualizar thumb activo
+        thumbsEl.querySelectorAll('.modal-thumb').forEach((t, i) => {
+          t.classList.toggle('active', i === idx);
+        });
+      }
+
+      // Tira de miniaturas
+      thumbsEl.innerHTML = mediaItems.map((item, i) => {
+        if (item.type === 'video') {
+          return `<div class="modal-thumb ${i === 0 ? 'active' : ''}" data-idx="${i}">
+                    <div class="modal-thumb-placeholder">▶ VIDEO</div>
+                  </div>`;
+        }
+        return `<div class="modal-thumb ${i === 0 ? 'active' : ''}" data-idx="${i}">
+                  <img src="${item.src}" alt="thumb ${i}">
+                </div>`;
+      }).join('');
+
+      thumbsEl.querySelectorAll('.modal-thumb').forEach(t => {
+        t.addEventListener('click', () => showMedia(parseInt(t.dataset.idx)));
+      });
+
+      showMedia(0);
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+      // Detener video al cerrar
+      const video = document.querySelector('#modalMedia video');
+      if (video) video.pause();
+      const iframe = document.querySelector('#modalMedia iframe');
+      if (iframe) iframe.src = iframe.src; // reset iframe
+    }
+
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    document.getElementById('modalOverlay').addEventListener('click', e => {
+      if (e.target === document.getElementById('modalOverlay')) closeModal();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    /* ═══════════════════════════════════════════════
+       FILTERS
+    ═══════════════════════════════════════════════ */
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderCards(btn.dataset.filter);
+      });
+    });
+
+    /* ═══════════════════════════════════════════════
+       NAV SCROLL
+    ═══════════════════════════════════════════════ */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    /* ═══════════════════════════════════════════════
+       CUSTOM CURSOR
+    ═══════════════════════════════════════════════ */
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX; mouseY = e.clientY;
+      cursor.style.left = mouseX + 'px';
+      cursor.style.top = mouseY + 'px';
+    });
+    (function animateRing() {
+      ringX += (mouseX - ringX) * 0.12;
+      ringY += (mouseY - ringY) * 0.12;
+      ring.style.left = ringX + 'px';
+      ring.style.top = ringY + 'px';
+      requestAnimationFrame(animateRing);
+    })();
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.transform = 'translate(-50%, -50%) scale(2)';
+        ring.style.opacity = '0';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+        ring.style.opacity = '1';
+      });
+    });
+
+    /* ═══════════════════════════════════════════════
+       INIT
+    ═══════════════════════════════════════════════ */
+    renderCards();
+
+    /* ─── HAMBURGER ─── */
+    const hamburger = document.getElementById('navHamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+
+    document.querySelectorAll('.mobile-menu-link, .mobile-menu .btn-primary').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+</body>
+
+</html>

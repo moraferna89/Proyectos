@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mensajes</title>
+<link rel="stylesheet" href="../../css/admin/mensajes.css">
+<link rel="stylesheet" href="../../css/admin/scrollbar.css">
+<script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+<script src="../../js/admin/mensajes.js"></script>
+<body>
+  <div id="usuarios">
+    <h2>Usuarios</h2>
+    <div id="lista-usuarios"></div>
+  </div>
+
+  <div id="chat-area">
+    <h2 id="nombre-chat">Selecciona un usuario</h2>
+    <div id="chat"></div>
+
+    <div id="chat-input" style="display:none;">
+      <input type="text" id="msg-input" placeholder="Escribe un mensaje..." />
+      <button id="send-btn">Enviar</button>
+    </div>
+  </div>
+</body>
+
+</html>

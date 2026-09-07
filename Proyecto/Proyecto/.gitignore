@@ -1,0 +1,32 @@
+# Entorno virtual
+entorno/
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Credenciales y variables de entorno (NUNCA subir al repo)
+.env
+credentials.json
+*.json
+
+# Archivos temporales de audio
+src/apis/audios_temp/
+*.wav
+*.mp3
+
+# Base de datos local de prueba
+*.db
+*.sqlite
+
+# Build / distribución
+build/
+dist/
+*.spec
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Evaluación Cobranzas</title>
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+  <script src="../../js/admin/detalle_llamada.js"></script>
+  <link rel="stylesheet" href="../../css/admin/detalle_llamada.css">
+  <link rel="stylesheet" href="../../css/admin/scrollbar.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header">
+
+      <h2>Detalles Llamada</h2>
+      <button onclick="volverLlamadas()">Volver</button>
+    </div>
+
+    <div class="fila-detalle">
+
+      <!-- IZQUIERDA: DATOS -->
+      <div class="columna-datos">
+        <div class="info-box">
+          <span class="label">Fecha de la llamada:</span>
+          <span class="value" id="fecha"></span>
+        </div>
+
+        <div class="info-box">
+          <span class="label">Hora de la llamada:</span>
+          <span class="value" id="hora"></span>
+        </div>
+
+        <div class="info-box">
+          <span class="label">Duración de la llamada:</span>
+          <span class="value" id="duracionLlamada"></span>
+        </div>
+      </div>
+
+      <!-- DERECHA: CLASIFICACIÓN -->
+      <div class="columna-clasificacion">
+        <div class="clasificacion-box">
+          <h3>Valoracion</h3>
+          <div class="circulo-clasificacion">
+            <svg class="progress-ring" width="80" height="80" viewBox="0 0 80 80">
+              <circle class="progress-ring-bg" cx="40" cy="40" r="30"></circle>
+              <circle class="progress-ring-fill" cx="40" cy="40" r="30"></circle>
+            </svg>
+
+            <div class="numero-clasificacion" id="clasificacion"></div>
+          </div>
+
+          <div class="nombre-clasificacion" id="clasificacionNombre"></div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <hr class="separador">
+
+
+
+    <div class="audio-section" id="audioContainer" style="display:none;">
+      <h3>Grabación de la llamada</h3>
+      <div class="audio-player">
+        <audio id="audioLlamada" controls></audio>
+      </div>
+    </div>
+
+    <div class="transcripcion-display-container">
+      <div id="transcripcionContainer" class="transcripcion-display">
+        <p id="presiona">Presiona "Transcribir" para obtener la conversación...</p>
+
+        <div id="resultadoTranscripcion" class="resultado-texto"></div>
+      </div>
+    </div>
+
+    <button class="boton-moderno" onclick="transcribirAudio()">Transcribir</button>
+
+  </div>
+</body>
+
+</html>

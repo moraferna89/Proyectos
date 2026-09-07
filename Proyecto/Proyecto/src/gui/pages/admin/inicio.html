@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio</title>
+  <!-- Enlace al CSS externo -->
+  <link rel="stylesheet" href="../../css/admin/inicio.css">
+  <link rel="stylesheet" href="../../css/admin/scrollbar.css">
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+  <script src="../../js/admin/inicio.js"></script>
+</head>
+
+<body>
+  <h1>Dashboard</h1>
+
+  <div class="stats-box">
+    <span id="total-llamadas">0</span>
+    <span class="llamada">Llamadas totales</span>
+  </div>
+
+  <div class="dashboard-grid">
+    <!-- Columna izquierda -->
+    <div class="card">
+      <div class="card-contactos">
+        <h2 class="h2ci">Contactos internos</h2>
+        <div class="scroll-container" id="contactos-container">
+          <!-- Los nombres se llenarán desde Python -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h2 class="ranking">Ranking</h2>
+    <div class="podio-wrapper">
+      <div class="podio">
+        <div class="tarjeta segundo">
+          <div id="avatar2" class="nombre-ejecutivo">Nombre 2</div>
+          <div class="medalla plata">2</div>
+        </div>
+        <div class="tarjeta primero">
+          <div id="avatar1" class="nombre-ejecutivo">Nombre 1</div>
+          <div class="medalla oro">1</div>
+        </div>
+        <div class="tarjeta tercero">
+          <div id="avatar3" class="nombre-ejecutivo">Nombre 3</div>
+          <div class="medalla bronce">3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</body>
+
+</html>

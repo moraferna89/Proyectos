@@ -1,0 +1,990 @@
+2026-06-15 00:12:26 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-15 00:12:26 [INFO] __main__ — BOT DE EJECUCIÓN — INICIO
+2026-06-15 00:12:26 [INFO] __main__ — Símbolo: EURUSD | Timeframe: M5
+2026-06-15 00:12:26 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-15 00:12:29 [INFO] data.mt5_connector — MT5 conectado — build 5836, cuenta: 101396200
+2026-06-15 00:12:29 [ERROR] __main__ — Error fatal: Modelo no encontrado en C:\Users\ferna\Desktop\Proyectos\BOTS\botentrenamiento\models\model_latest.pkl. Ejecuta el botentrenamiento primero.
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 158, in run_live
+    model       = load_model()
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\execution\signal.py", line 23, in load_model
+    raise FileNotFoundError(
+    ...<2 lines>...
+    )
+FileNotFoundError: Modelo no encontrado en C:\Users\ferna\Desktop\Proyectos\BOTS\botentrenamiento\models\model_latest.pkl. Ejecuta el botentrenamiento primero.
+2026-06-15 00:12:29 [INFO] data.mt5_connector — MT5 desconectado.
+2026-06-15 00:12:29 [INFO] __main__ — BOT DE EJECUCIÓN — FIN
+2026-06-15 00:12:29 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-15 00:17:31 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-15 00:17:31 [INFO] __main__ — BOT DE EJECUCIÓN — INICIO
+2026-06-15 00:17:31 [INFO] __main__ — Símbolo: EURUSD | Timeframe: M5
+2026-06-15 00:17:31 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-15 00:17:31 [INFO] data.mt5_connector — MT5 conectado — build 5836, cuenta: 101396200
+2026-06-15 00:17:31 [ERROR] __main__ — Error fatal: Modelo no encontrado en C:\Users\ferna\Desktop\Proyectos\BOTS\botentrenamiento\models\model_latest.pkl. Ejecuta el botentrenamiento primero.
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 158, in run_live
+    model       = load_model()
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\execution\signal.py", line 23, in load_model
+    raise FileNotFoundError(
+    ...<2 lines>...
+    )
+FileNotFoundError: Modelo no encontrado en C:\Users\ferna\Desktop\Proyectos\BOTS\botentrenamiento\models\model_latest.pkl. Ejecuta el botentrenamiento primero.
+2026-06-15 00:17:31 [INFO] data.mt5_connector — MT5 desconectado.
+2026-06-15 00:17:31 [INFO] __main__ — BOT DE EJECUCIÓN — FIN
+2026-06-15 00:17:31 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-15 00:17:34 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-15 00:17:34 [INFO] __main__ — BOT DE EJECUCIÓN — INICIO
+2026-06-15 00:17:34 [INFO] __main__ — Símbolo: EURUSD | Timeframe: M5
+2026-06-15 00:17:34 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-15 00:17:34 [INFO] data.mt5_connector — MT5 conectado — build 5836, cuenta: 101396200
+2026-06-15 00:17:34 [ERROR] __main__ — Error fatal: Modelo no encontrado en C:\Users\ferna\Desktop\Proyectos\BOTS\botentrenamiento\models\model_latest.pkl. Ejecuta el botentrenamiento primero.
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 158, in run_live
+    model       = load_model()
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\execution\signal.py", line 23, in load_model
+    raise FileNotFoundError(
+    ...<2 lines>...
+    )
+FileNotFoundError: Modelo no encontrado en C:\Users\ferna\Desktop\Proyectos\BOTS\botentrenamiento\models\model_latest.pkl. Ejecuta el botentrenamiento primero.
+2026-06-15 00:17:34 [INFO] data.mt5_connector — MT5 desconectado.
+2026-06-15 00:17:34 [INFO] __main__ — BOT DE EJECUCIÓN — FIN
+2026-06-15 00:17:34 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-15 00:27:55 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-15 00:27:55 [INFO] __main__ — BOT DE EJECUCIÓN — INICIO
+2026-06-15 00:27:55 [INFO] __main__ — Símbolo: EURUSD | Timeframe: M5
+2026-06-15 00:27:55 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-15 00:27:55 [INFO] data.mt5_connector — MT5 conectado — build 5836, cuenta: 101396200
+2026-06-15 00:27:57 [INFO] execution.signal — Modelo cargado desde C:\Users\ferna\Desktop\Proyectos\BOTS\botentrenamiento\models\model_latest.pkl
+2026-06-15 00:27:57 [INFO] __main__ — Bar: 2026-06-15 07:20:00 | Close: 1.16049 | RSI: 71.3 | Señal: HOLD (B:0.088 S:0.140)
+2026-06-15 00:27:57 [INFO] __main__ — Acción: held
+2026-06-15 00:27:57 [INFO] __main__ — Próxima vela en 125 s...
+2026-06-15 00:30:02 [INFO] __main__ — Nuevo modelo detectado — recargando...
+2026-06-15 00:30:02 [INFO] execution.signal — Modelo cargado desde C:\Users\ferna\Desktop\Proyectos\BOTS\botentrenamiento\models\model_latest.pkl
+2026-06-15 00:30:02 [INFO] __main__ — Bar: 2026-06-15 07:25:00 | Close: 1.16080 | RSI: 79.9 | Señal: HOLD (B:0.041 S:0.058)
+2026-06-15 00:30:02 [INFO] __main__ — Acción: held
+2026-06-15 00:30:02 [INFO] __main__ — Próxima vela en 299 s...
+2026-06-15 00:35:02 [INFO] __main__ — Bar: 2026-06-15 07:30:00 | Close: 1.16090 | RSI: 81.8 | Señal: HOLD (B:0.043 S:0.034)
+2026-06-15 00:35:02 [INFO] __main__ — Acción: held
+2026-06-15 00:35:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 00:40:02 [INFO] __main__ — Bar: 2026-06-15 07:30:00 | Close: 1.16090 | RSI: 81.8 | Señal: HOLD (B:0.043 S:0.034)
+2026-06-15 00:40:02 [INFO] __main__ — Acción: held
+2026-06-15 00:40:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 00:45:02 [INFO] __main__ — Bar: 2026-06-15 07:35:00 | Close: 1.16097 | RSI: 83.1 | Señal: HOLD (B:0.037 S:0.044)
+2026-06-15 00:45:02 [INFO] __main__ — Acción: held
+2026-06-15 00:45:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 00:50:02 [INFO] __main__ — Bar: 2026-06-15 07:40:00 | Close: 1.16098 | RSI: 83.3 | Señal: HOLD (B:0.065 S:0.052)
+2026-06-15 00:50:02 [INFO] __main__ — Acción: held
+2026-06-15 00:50:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 00:55:02 [INFO] __main__ — Bar: 2026-06-15 07:50:00 | Close: 1.16113 | RSI: 85.9 | Señal: HOLD (B:0.091 S:0.118)
+2026-06-15 00:55:02 [INFO] __main__ — Acción: held
+2026-06-15 00:55:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 01:00:02 [INFO] __main__ — Bar: 2026-06-15 07:55:00 | Close: 1.16116 | RSI: 86.4 | Señal: HOLD (B:0.089 S:0.135)
+2026-06-15 01:00:02 [INFO] __main__ — Acción: held
+2026-06-15 01:00:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 01:05:02 [INFO] __main__ — Bar: 2026-06-15 08:00:00 | Close: 1.16141 | RSI: 89.9 | Señal: HOLD (B:0.053 S:0.080)
+2026-06-15 01:05:02 [INFO] __main__ — Acción: held
+2026-06-15 01:05:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 01:10:02 [INFO] __main__ — Bar: 2026-06-15 08:00:00 | Close: 1.16141 | RSI: 89.9 | Señal: HOLD (B:0.053 S:0.080)
+2026-06-15 01:10:02 [INFO] __main__ — Acción: held
+2026-06-15 01:10:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 01:15:02 [INFO] __main__ — Bar: 2026-06-15 08:05:00 | Close: 1.16139 | RSI: 87.9 | Señal: HOLD (B:0.095 S:0.096)
+2026-06-15 01:15:02 [INFO] __main__ — Acción: held
+2026-06-15 01:15:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 01:20:02 [INFO] __main__ — Bar: 2026-06-15 08:15:00 | Close: 1.16189 | RSI: 92.5 | Señal: HOLD (B:0.104 S:0.052)
+2026-06-15 01:20:02 [INFO] __main__ — Acción: held
+2026-06-15 01:20:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 01:25:02 [INFO] __main__ — Bar: 2026-06-15 08:20:00 | Close: 1.16183 | RSI: 87.6 | Señal: HOLD (B:0.072 S:0.038)
+2026-06-15 01:25:02 [INFO] __main__ — Acción: held
+2026-06-15 01:25:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 01:30:02 [INFO] __main__ — Bar: 2026-06-15 08:25:00 | Close: 1.16173 | RSI: 79.8 | Señal: HOLD (B:0.117 S:0.059)
+2026-06-15 01:30:02 [INFO] __main__ — Acción: held
+2026-06-15 01:30:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 01:35:02 [INFO] __main__ — Bar: 2026-06-15 08:25:00 | Close: 1.16173 | RSI: 79.8 | Señal: HOLD (B:0.117 S:0.059)
+2026-06-15 01:35:02 [INFO] __main__ — Acción: held
+2026-06-15 01:35:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 01:40:02 [INFO] __main__ — Bar: 2026-06-15 08:35:00 | Close: 1.16143 | RSI: 60.8 | Señal: HOLD (B:0.074 S:0.071)
+2026-06-15 01:40:02 [INFO] __main__ — Acción: held
+2026-06-15 01:40:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-15 01:45:02 [INFO] __main__ — Bar: 2026-06-15 08:40:00 | Close: 1.16130 | RSI: 54.2 | Señal: HOLD (B:0.043 S:0.035)
+2026-06-15 01:45:02 [INFO] __main__ — Acción: held
+2026-06-15 01:45:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 13:11:01 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-16 13:11:01 [INFO] __main__ — BOT DE EJECUCIÓN — INICIO
+2026-06-16 13:11:01 [INFO] __main__ — Símbolo: EURUSD | Timeframe: M5
+2026-06-16 13:11:01 [INFO] __main__ — ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026-06-16 13:11:06 [INFO] data.mt5_connector — MT5 conectado — build 5836, cuenta: 101396200
+2026-06-16 13:11:17 [INFO] execution.signal — Modelo cargado desde C:\Users\ferna\Desktop\Proyectos\BOTS\botentrenamiento\models\model_latest.pkl
+2026-06-16 13:11:18 [INFO] __main__ — Bar: 2026-06-16 20:05:00 | Close: 1.16117 | RSI: 52.7 | Señal: HOLD (B:0.038 S:0.031)
+2026-06-16 13:11:18 [INFO] __main__ — Acción: held
+2026-06-16 13:11:18 [INFO] __main__ — Próxima vela en 224 s...
+2026-06-16 13:15:02 [INFO] __main__ — Bar: 2026-06-16 20:10:00 | Close: 1.16111 | RSI: 50.3 | Señal: HOLD (B:0.027 S:0.019)
+2026-06-16 13:15:02 [INFO] __main__ — Acción: held
+2026-06-16 13:15:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 13:20:02 [INFO] __main__ — Bar: 2026-06-16 20:15:00 | Close: 1.16112 | RSI: 50.7 | Señal: HOLD (B:0.026 S:0.022)
+2026-06-16 13:20:02 [INFO] __main__ — Acción: held
+2026-06-16 13:20:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 13:25:02 [INFO] __main__ — Bar: 2026-06-16 20:20:00 | Close: 1.16111 | RSI: 50.3 | Señal: HOLD (B:0.028 S:0.040)
+2026-06-16 13:25:02 [INFO] __main__ — Acción: held
+2026-06-16 13:25:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 13:30:02 [INFO] __main__ — Bar: 2026-06-16 20:25:00 | Close: 1.16109 | RSI: 49.3 | Señal: HOLD (B:0.020 S:0.024)
+2026-06-16 13:30:02 [INFO] __main__ — Acción: held
+2026-06-16 13:30:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 13:35:02 [INFO] __main__ — Bar: 2026-06-16 20:30:00 | Close: 1.16112 | RSI: 50.9 | Señal: HOLD (B:0.031 S:0.036)
+2026-06-16 13:35:02 [INFO] __main__ — Acción: held
+2026-06-16 13:35:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 13:40:02 [INFO] __main__ — Bar: 2026-06-16 20:30:00 | Close: 1.16112 | RSI: 50.9 | Señal: HOLD (B:0.031 S:0.036)
+2026-06-16 13:40:02 [INFO] __main__ — Acción: held
+2026-06-16 13:40:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 13:45:02 [INFO] __main__ — Bar: 2026-06-16 20:40:00 | Close: 1.16112 | RSI: 51.3 | Señal: HOLD (B:0.025 S:0.032)
+2026-06-16 13:45:02 [INFO] __main__ — Acción: held
+2026-06-16 13:45:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 13:50:02 [INFO] __main__ — Bar: 2026-06-16 20:45:00 | Close: 1.16109 | RSI: 49.6 | Señal: HOLD (B:0.020 S:0.031)
+2026-06-16 13:50:02 [INFO] __main__ — Acción: held
+2026-06-16 13:50:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 13:55:02 [INFO] __main__ — Bar: 2026-06-16 20:50:00 | Close: 1.16107 | RSI: 48.4 | Señal: HOLD (B:0.013 S:0.028)
+2026-06-16 13:55:02 [INFO] __main__ — Acción: held
+2026-06-16 13:55:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 14:00:02 [INFO] __main__ — Bar: 2026-06-16 20:55:00 | Close: 1.16104 | RSI: 46.5 | Señal: HOLD (B:0.014 S:0.032)
+2026-06-16 14:00:02 [INFO] __main__ — Acción: held
+2026-06-16 14:00:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 14:05:02 [INFO] __main__ — Bar: 2026-06-16 21:00:00 | Close: 1.16118 | RSI: 55.4 | Señal: HOLD (B:0.022 S:0.041)
+2026-06-16 14:05:02 [INFO] __main__ — Acción: held
+2026-06-16 14:05:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 14:10:02 [INFO] __main__ — Bar: 2026-06-16 21:05:00 | Close: 1.16098 | RSI: 43.9 | Señal: HOLD (B:0.028 S:0.045)
+2026-06-16 14:10:02 [INFO] __main__ — Acción: held
+2026-06-16 14:10:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 14:15:02 [INFO] __main__ — Bar: 2026-06-16 21:10:00 | Close: 1.16104 | RSI: 47.5 | Señal: HOLD (B:0.032 S:0.034)
+2026-06-16 14:15:02 [INFO] __main__ — Acción: held
+2026-06-16 14:15:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 14:20:02 [INFO] __main__ — Bar: 2026-06-16 21:15:00 | Close: 1.16098 | RSI: 44.3 | Señal: HOLD (B:0.015 S:0.041)
+2026-06-16 14:20:02 [INFO] __main__ — Acción: held
+2026-06-16 14:20:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 14:25:02 [INFO] __main__ — Bar: 2026-06-16 21:20:00 | Close: 1.16099 | RSI: 45.0 | Señal: HOLD (B:0.013 S:0.041)
+2026-06-16 14:25:02 [INFO] __main__ — Acción: held
+2026-06-16 14:25:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 14:30:02 [INFO] __main__ — Bar: 2026-06-16 21:20:00 | Close: 1.16099 | RSI: 45.0 | Señal: HOLD (B:0.013 S:0.041)
+2026-06-16 14:30:02 [INFO] __main__ — Acción: held
+2026-06-16 14:30:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 14:35:02 [INFO] __main__ — Bar: 2026-06-16 21:30:00 | Close: 1.16078 | RSI: 34.4 | Señal: HOLD (B:0.022 S:0.035)
+2026-06-16 14:35:02 [INFO] __main__ — Acción: held
+2026-06-16 14:35:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 14:40:02 [INFO] __main__ — Bar: 2026-06-16 21:35:00 | Close: 1.16061 | RSI: 28.2 | Señal: HOLD (B:0.029 S:0.039)
+2026-06-16 14:40:02 [INFO] __main__ — Acción: held
+2026-06-16 14:40:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 14:45:02 [INFO] __main__ — Bar: 2026-06-16 21:40:00 | Close: 1.16062 | RSI: 29.1 | Señal: HOLD (B:0.029 S:0.053)
+2026-06-16 14:45:02 [INFO] __main__ — Acción: held
+2026-06-16 14:45:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 14:50:02 [INFO] __main__ — Bar: 2026-06-16 21:40:00 | Close: 1.16062 | RSI: 29.1 | Señal: HOLD (B:0.029 S:0.053)
+2026-06-16 14:50:02 [INFO] __main__ — Acción: held
+2026-06-16 14:50:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 14:55:02 [INFO] __main__ — Bar: 2026-06-16 21:50:00 | Close: 1.16072 | RSI: 39.2 | Señal: HOLD (B:0.023 S:0.023)
+2026-06-16 14:55:02 [INFO] __main__ — Acción: held
+2026-06-16 14:55:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 15:00:02 [INFO] __main__ — Bar: 2026-06-16 21:55:00 | Close: 1.16096 | RSI: 53.4 | Señal: HOLD (B:0.020 S:0.053)
+2026-06-16 15:00:02 [INFO] __main__ — Acción: held
+2026-06-16 15:00:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 15:05:02 [INFO] __main__ — Bar: 2026-06-16 22:00:00 | Close: 1.16122 | RSI: 63.7 | Señal: HOLD (B:0.019 S:0.046)
+2026-06-16 15:05:02 [INFO] __main__ — Acción: held
+2026-06-16 15:05:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 15:10:02 [INFO] __main__ — Bar: 2026-06-16 22:05:00 | Close: 1.16107 | RSI: 55.8 | Señal: HOLD (B:0.023 S:0.046)
+2026-06-16 15:10:02 [INFO] __main__ — Acción: held
+2026-06-16 15:10:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 15:15:02 [INFO] __main__ — Bar: 2026-06-16 22:10:00 | Close: 1.16101 | RSI: 52.9 | Señal: HOLD (B:0.032 S:0.042)
+2026-06-16 15:15:02 [INFO] __main__ — Acción: held
+2026-06-16 15:15:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 15:20:02 [INFO] __main__ — Bar: 2026-06-16 22:15:00 | Close: 1.16102 | RSI: 53.4 | Señal: HOLD (B:0.044 S:0.059)
+2026-06-16 15:20:02 [INFO] __main__ — Acción: held
+2026-06-16 15:20:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 15:25:02 [INFO] __main__ — Bar: 2026-06-16 22:20:00 | Close: 1.16103 | RSI: 53.8 | Señal: HOLD (B:0.029 S:0.043)
+2026-06-16 15:25:02 [INFO] __main__ — Acción: held
+2026-06-16 15:25:02 [INFO] __main__ — Próxima vela en 300 s...
+2026-06-16 15:30:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 15:30:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 15:35:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 15:35:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 15:40:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 15:40:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 15:45:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 15:45:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 15:50:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 15:50:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 15:55:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 15:55:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 16:00:03 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 16:00:33 [INFO] __main__ — Próxima vela en 269 s...
+2026-06-16 16:05:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 16:05:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 16:10:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 16:10:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 16:15:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 16:15:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 16:20:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 16:20:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 16:25:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 16:25:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 16:30:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 16:30:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 16:35:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 16:35:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 16:40:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 16:40:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 16:45:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 16:45:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 16:50:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 16:50:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 16:55:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 16:55:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 17:00:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 17:00:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 17:05:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 17:05:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 17:10:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 17:10:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 17:15:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 17:15:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 17:20:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 17:20:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 17:25:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 17:25:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 17:30:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 17:30:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 17:35:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 17:35:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 17:40:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 17:40:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 17:45:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 17:45:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 17:50:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 17:50:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 17:55:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 17:55:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 18:00:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 18:00:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 18:05:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 18:05:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 18:10:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 18:10:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 18:15:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 18:15:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 18:20:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 18:20:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 18:25:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 18:25:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 18:30:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 18:30:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 18:35:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 18:35:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 18:40:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 18:40:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 18:45:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 18:45:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 18:50:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 18:50:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 18:55:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 18:55:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 19:00:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 19:00:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 19:05:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 19:05:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 19:10:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 19:10:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 19:15:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 19:15:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 19:20:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 19:20:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 19:25:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 19:25:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 19:30:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 19:30:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 19:35:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 19:35:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 19:40:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 19:40:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 19:45:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 19:45:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 19:50:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 19:50:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 19:55:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 19:55:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 20:00:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 20:00:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 20:05:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 20:05:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 20:10:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 20:10:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 20:15:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 20:15:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 20:20:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 20:20:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 20:25:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 20:25:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 20:30:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 20:30:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 20:35:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 20:35:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 20:40:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 20:40:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 20:45:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 20:45:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 20:50:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 20:50:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 20:55:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 20:55:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 21:00:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 21:00:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 21:05:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 21:05:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 21:10:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 21:10:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 21:15:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 21:15:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 21:20:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 21:20:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 21:25:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 21:25:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 21:30:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 21:30:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 21:35:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 21:35:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 21:40:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 21:40:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 21:45:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 21:45:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 21:50:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 21:50:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 21:55:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 21:55:32 [INFO] __main__ — Próxima vela en 270 s...
+2026-06-16 22:00:02 [ERROR] __main__ — Error en iteración: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+Traceback (most recent call last):
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 182, in run_live
+    state = run_once(model, state)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\exec_bot.py", line 90, in run_once
+    df_raw = get_latest_bars(symbol=SYMBOL, timeframe=TIMEFRAME, bars=WARMUP_BARS)
+  File "C:\Users\ferna\Desktop\Proyectos\BOTS\botejecucion\data\mt5_connector.py", line 62, in get_latest_bars
+    raise RuntimeError(f"No se pudieron obtener datos de MT5: {mt5.last_error()}")
+RuntimeError: No se pudieron obtener datos de MT5: (-10001, 'IPC send failed')
+2026-06-16 22:00:32 [INFO] __main__ — Próxima vela en 270 s...

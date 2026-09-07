@@ -1,0 +1,98 @@
+
+/* 🌌 Fondo moderno */
+body {
+font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+background: radial-gradient(circle at top left, #3f3f3f, #8b8b8b);
+color: #fff;
+margin: 0;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center; /* centra verticalmente */
+align-items: center;
+}
+
+/* 🔹 Título principal */
+h1 {
+font-size: 32px;
+margin-bottom: 30px;
+text-align: center;
+color: #e9e9e9;
+letter-spacing: 1px;
+text-shadow: 0 0 10px rgba(196, 196, 196, 0.6);
+animation: fadeIn 1s ease forwards;
+}
+
+/* 💠 Contenedor general */
+.account-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 👉 2 columnas fijas */
+  gap: 25px;
+  width: 100%;
+  max-width: 800px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* 📱 Responsive: en pantallas pequeñas pasa a 1 columna */
+@media (max-width: 700px) {
+  .account-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* 🪩 Tarjetas con efecto glass */
+.card {
+background: rgba(255, 255, 255, 0.05);
+border-radius: 18px;
+padding: 25px;
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.1);
+box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+text-align: center;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-7px);
+box-shadow: 0 8px 35px rgba(235, 235, 235, 0.4);
+}
+
+/* 🏷️ Etiquetas */
+.card h2 {
+font-size: 16px;
+margin-bottom: 8px;
+color: #b6b6b6;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+/* 💬 Valor dinámico */
+.card p {
+font-size: 22px;
+font-weight: 600;
+color: #fff;
+margin: 0;
+text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+h1 {
+    font-size: 26px;
+}
+.card p {
+    font-size: 20px;
+}
+}
+
+/* ✨ Animaciones */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(-15px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}

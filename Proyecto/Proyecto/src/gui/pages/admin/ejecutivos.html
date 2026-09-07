@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Principal</title>
+  <link rel="stylesheet" href="../../css/admin/ejecutivos.css">
+  <link rel="stylesheet" href="../../css/admin/scrollbar.css">
+  <!-- Scripts -->
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+  <script src="../../js/admin/main.js"></script>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      <h2>Ejecutivos</h2>
+    </div>
+    <div class="buscador-ejecutivo">
+      <input type="number" id="id_ejecutivo" placeholder="Buscar por ID de llamada">
+      <button onclick="buscarEjecutivo()">Buscar</button>
+    </div>
+    <div id="tabla-ejecutivos">
+      <table class="tabla-ejecutivos">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

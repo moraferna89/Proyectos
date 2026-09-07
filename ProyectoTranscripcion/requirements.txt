@@ -1,0 +1,8 @@
+PyQt5
+PyQtWebEngine
+pymysql
+assemblyai
+google-cloud-language
+google-genai
+reportlab
+python-dotenv

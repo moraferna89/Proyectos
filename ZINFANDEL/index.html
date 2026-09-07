@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Zinfandel | Isla de Maipo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --burgundy: #6B2737;
+            --burgundy-dark: #4A1825;
+            --gold: #C4972A;
+            --gold-light: #D4AF5A;
+            --dark: #1A1007;
+            --cream: #F7F0E6;
+            --cream-dark: #EDE3D4;
+            --sage: #7B8C5C;
+            --text-dark: #2C1810;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; color: var(--text-dark); background: var(--cream); overflow-x: hidden; }
+
+        /* ── NAVBAR ── */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 1.8rem 5%;
+            display: flex; align-items: center; justify-content: space-between;
+            transition: all 0.4s ease;
+        }
+        nav.scrolled {
+            background: rgba(26,16,7,0.96);
+            backdrop-filter: blur(12px);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 30px rgba(0,0,0,0.35);
+        }
+        .nav-logo img { height: 65px; transition: height 0.4s; }
+        nav.scrolled .nav-logo img { height: 48px; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a {
+            color: var(--cream); text-decoration: none; font-size: 0.8rem;
+            font-weight: 500; letter-spacing: 2px; text-transform: uppercase;
+            position: relative; padding-bottom: 4px; transition: color 0.3s;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 0; height: 1px; background: var(--gold); transition: width 0.3s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: var(--gold) !important; color: var(--dark) !important;
+            padding: 0.55rem 1.4rem; border-radius: 2px; font-weight: 600 !important;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover { background: var(--gold-light) !important; }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+        .hamburger span { width: 26px; height: 2px; background: var(--cream); display: block; transition: all 0.3s; }
+
+        /* ── HERO ── */
+        #hero { height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .hero-bg {
+            position: absolute; inset: 0;
+            background: url('https://www.800.cl/galeriasitios/Och/2018/5/16/Och_21282_Fl-9295-zinfandel-Fl-2.JPG') center/cover no-repeat;
+            transform: scale(1.12); will-change: transform;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(150deg, rgba(26,16,7,0.88) 0%, rgba(107,39,55,0.55) 55%, rgba(26,16,7,0.80) 100%);
+        }
+        .hero-content { position: relative; z-index: 2; text-align: center; color: var(--cream); padding: 0 2rem; }
+        .hero-eyebrow {
+            font-size: 0.75rem; letter-spacing: 6px; text-transform: uppercase; color: var(--gold);
+            margin-bottom: 1.5rem; opacity: 0; transform: translateY(20px);
+            animation: fadeUp 0.8s 0.4s forwards;
+        }
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(4rem, 12vw, 9rem);
+            font-weight: 700; line-height: 0.88; letter-spacing: -3px;
+            opacity: 0; transform: translateY(30px);
+            animation: fadeUp 0.9s 0.6s forwards;
+        }
+        .hero-title span { color: var(--gold); font-style: italic; }
+        .hero-divider {
+            width: 55px; height: 1px; background: var(--gold); margin: 2rem auto;
+            opacity: 0; animation: fadeUp 0.7s 0.8s forwards;
+        }
+        .hero-subtitle {
+            font-size: 0.9rem; letter-spacing: 4px; text-transform: uppercase;
+            font-weight: 300; color: rgba(247,240,230,0.75);
+            opacity: 0; animation: fadeUp 0.7s 1s forwards;
+        }
+        .hero-buttons {
+            margin-top: 3rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
+            opacity: 0; animation: fadeUp 0.7s 1.2s forwards;
+        }
+        .btn-primary {
+            background: var(--gold); color: var(--dark); padding: 1rem 2.8rem;
+            text-decoration: none; font-weight: 700; font-size: 0.8rem;
+            letter-spacing: 2px; text-transform: uppercase; border-radius: 2px;
+            border: 2px solid var(--gold); transition: all 0.3s;
+        }
+        .btn-primary:hover { background: transparent; color: var(--gold); }
+        .btn-outline {
+            background: transparent; color: var(--cream); padding: 1rem 2.8rem;
+            text-decoration: none; font-weight: 500; font-size: 0.8rem;
+            letter-spacing: 2px; text-transform: uppercase; border-radius: 2px;
+            border: 2px solid rgba(247,240,230,0.45); transition: all 0.3s;
+        }
+        .btn-outline:hover { border-color: var(--cream); background: rgba(247,240,230,0.08); }
+        .hero-scroll {
+            position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+            display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+            color: rgba(247,240,230,0.5); font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase;
+            animation: bounce 2.5s infinite;
+        }
+
+        /* ── SECTION BASE ── */
+        section { padding: 7rem 5%; }
+        .section-eyebrow { font-size: 0.72rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.1; color: var(--burgundy-dark); }
+        .section-title em { color: var(--burgundy); font-style: italic; }
+        .divider-line { width: 50px; height: 2px; background: linear-gradient(90deg, var(--gold), var(--burgundy)); margin: 1.5rem 0 2rem; }
+
+        /* Reveal animations */
+        .reveal       { opacity: 0; transform: translateY(50px); transition: opacity 0.85s cubic-bezier(.16,1,.3,1), transform 0.85s cubic-bezier(.16,1,.3,1); }
+        .reveal-left  { opacity: 0; transform: translateX(-55px); transition: opacity 0.85s cubic-bezier(.16,1,.3,1), transform 0.85s cubic-bezier(.16,1,.3,1); }
+        .reveal-right { opacity: 0; transform: translateX(55px);  transition: opacity 0.85s cubic-bezier(.16,1,.3,1), transform 0.85s cubic-bezier(.16,1,.3,1); }
+        .reveal.active, .reveal-left.active, .reveal-right.active { opacity: 1; transform: none; }
+
+        /* ── HISTORIA ── */
+        #historia { background: var(--dark); }
+        .historia-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7rem; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .historia-image { position: relative; }
+        .historia-image img { width: 100%; height: 560px; object-fit: cover; display: block; border-radius: 2px; }
+        .historia-image-frame {
+            position: absolute; inset: 18px -18px -18px 18px;
+            border: 1px solid rgba(196,151,42,0.5); border-radius: 2px; pointer-events: none; z-index: 0;
+        }
+        .historia-image { z-index: 1; }
+        .historia-text .section-title { color: var(--cream); }
+        .historia-text .section-title em { color: var(--gold); }
+        .historia-text p { font-size: 0.97rem; line-height: 1.95; color: rgba(247,240,230,0.75); margin-bottom: 1.4rem; font-weight: 300; }
+        .historia-stats { display: flex; gap: 3rem; margin-top: 3rem; padding-top: 3rem; border-top: 1px solid rgba(247,240,230,0.12); }
+        .stat-num { font-family: 'Playfair Display', serif; font-size: 3.2rem; color: var(--gold); font-weight: 700; line-height: 1; }
+        .stat-lbl { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(247,240,230,0.5); margin-top: 0.4rem; }
+
+        /* ── MENU ── */
+        #menu { background: var(--cream); }
+        .menu-header { text-align: center; margin-bottom: 4rem; }
+        .menu-header .divider-line { margin: 1.5rem auto 2rem; }
+        .menu-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; max-width: 1150px; margin: 0 auto; }
+        .menu-card { background: #fff; border-radius: 3px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.07); transition: transform 0.35s, box-shadow 0.35s; }
+        .menu-card:hover { transform: translateY(-10px); box-shadow: 0 18px 45px rgba(107,39,55,0.15); }
+        .menu-card-img { height: 210px; overflow: hidden; }
+        .menu-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+        .menu-card:hover .menu-card-img img { transform: scale(1.09); }
+        .menu-card-body { padding: 1.6rem; }
+        .menu-card-cat { font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+        .menu-card-name { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--text-dark); margin-bottom: 0.5rem; }
+        .menu-card-desc { font-size: 0.84rem; color: #999; line-height: 1.65; }
+        .menu-cta { text-align: center; margin-top: 3.5rem; }
+        .btn-wsp-menu {
+            display: inline-flex; align-items: center; gap: 0.8rem;
+            background: var(--burgundy); color: var(--cream);
+            padding: 1rem 2.8rem; text-decoration: none;
+            font-size: 0.82rem; letter-spacing: 2px; text-transform: uppercase;
+            font-weight: 600; border-radius: 2px; transition: all 0.3s;
+        }
+        .btn-wsp-menu:hover { background: var(--burgundy-dark); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(107,39,55,0.25); }
+
+        /* ── SEPARADOR VIÑA ── */
+        .parallax-strip {
+            height: 420px; position: relative; overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .parallax-strip-bg {
+            position: absolute; inset: -60px 0;
+            background: url('https://static.wixstatic.com/media/c1a5e8_4bdc61a6ad7348d896ac14e12ad2c982.jpg') center/cover no-repeat;
+            will-change: transform;
+        }
+        .parallax-strip-overlay { position: absolute; inset: 0; background: rgba(26,16,7,0.72); }
+        .parallax-strip-content { position: relative; z-index: 2; text-align: center; color: var(--cream); padding: 0 2rem; }
+        .parallax-strip-content blockquote {
+            font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 4vw, 2.8rem);
+            font-style: italic; line-height: 1.35; max-width: 750px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .parallax-strip-content cite { display: block; font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-top: 1.5rem; font-style: normal; }
+
+        /* ── GALERÍA ── */
+        #galeria { padding: 0; background: var(--dark); }
+        .galeria-header { padding: 6rem 5% 3rem; text-align: center; }
+        .galeria-header .section-title { color: var(--cream); }
+        .galeria-header .section-title em { color: var(--gold); }
+        .galeria-header .divider-line { margin: 1.5rem auto 0; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: 290px 290px;
+            gap: 5px;
+        }
+        .gi { overflow: hidden; position: relative; cursor: zoom-in; }
+        .gi:first-child { grid-row: span 2; }
+        .gi img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.65s cubic-bezier(.16,1,.3,1); display: block; }
+        .gi:hover img { transform: scale(1.09); }
+        .gi-overlay {
+            position: absolute; inset: 0; background: rgba(107,39,55,0);
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.3s;
+        }
+        .gi:hover .gi-overlay { background: rgba(107,39,55,0.35); }
+        .gi-overlay i { color: white; font-size: 2rem; opacity: 0; transform: scale(0.7); transition: all 0.3s; }
+        .gi:hover .gi-overlay i { opacity: 1; transform: scale(1); }
+
+        /* ── RESERVAS ── */
+        #reservas { background: linear-gradient(140deg, var(--burgundy-dark) 0%, #7D2E40 100%); }
+        .reservas-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 6rem; align-items: start; max-width: 1150px; margin: 0 auto; }
+        .reservas-text .section-title { color: var(--cream); }
+        .reservas-text .section-title em { color: var(--gold); }
+        .reservas-text p { color: rgba(247,240,230,0.78); line-height: 1.9; font-size: 0.97rem; font-weight: 300; }
+        .horarios { margin-top: 2.5rem; }
+        .horario-item { display: flex; justify-content: space-between; padding: 0.9rem 0; border-bottom: 1px solid rgba(247,240,230,0.12); font-size: 0.88rem; }
+        .horario-item .day { color: rgba(247,240,230,0.65); }
+        .horario-item .time { color: var(--gold); font-weight: 600; }
+        .wsp-direct {
+            display: inline-flex; align-items: center; gap: 0.8rem; margin-top: 2.5rem;
+            background: #25D366; color: white; padding: 0.9rem 2rem; text-decoration: none;
+            font-size: 0.82rem; letter-spacing: 1.5px; font-weight: 700; border-radius: 50px;
+            transition: all 0.3s; box-shadow: 0 6px 25px rgba(37,211,102,0.35);
+        }
+        .wsp-direct:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(37,211,102,0.45); }
+
+        /* Form */
+        .reserva-form { background: #fff; padding: 3rem 2.8rem; border-radius: 4px; box-shadow: 0 25px 60px rgba(0,0,0,0.3); }
+        .form-title { font-family: 'Playfair Display', serif; font-size: 1.9rem; color: var(--text-dark); margin-bottom: 0.4rem; }
+        .form-subtitle { font-size: 0.82rem; color: #aaa; margin-bottom: 2rem; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-group { display: flex; flex-direction: column; margin-bottom: 1rem; }
+        .form-group label { font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: #555; margin-bottom: 0.45rem; font-weight: 600; }
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 0.85rem 1rem; border: 1.5px solid #EBEBEB; border-radius: 2px;
+            font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: var(--text-dark);
+            transition: border-color 0.3s; background: #FAFAFA; outline: none;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--burgundy); background: #fff; }
+        .form-group textarea { height: 95px; resize: none; }
+        .btn-submit {
+            width: 100%; padding: 1.1rem; background: var(--burgundy); color: white;
+            border: none; font-family: 'Montserrat', sans-serif; font-size: 0.82rem;
+            letter-spacing: 2px; text-transform: uppercase; font-weight: 700; cursor: pointer;
+            border-radius: 2px; transition: all 0.3s; margin-top: 0.5rem;
+            display: flex; align-items: center; justify-content: center; gap: 0.8rem;
+        }
+        .btn-submit:hover { background: var(--burgundy-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(107,39,55,0.3); }
+
+        /* ── UBICACIÓN ── */
+        #ubicacion { padding: 0; background: var(--cream-dark); }
+        .ubicacion-grid { display: grid; grid-template-columns: 1fr 1.3fr; }
+        .ubicacion-info { padding: 7rem 5%; display: flex; flex-direction: column; justify-content: center; }
+        .contact-item { display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 2.2rem; }
+        .contact-icon { width: 52px; height: 52px; background: var(--burgundy); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .contact-icon i { color: var(--cream); font-size: 1.1rem; }
+        .contact-label { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+        .contact-value { font-size: 0.97rem; color: var(--text-dark); font-weight: 500; line-height: 1.6; }
+        .contact-value a { color: inherit; text-decoration: none; }
+        .social-links { display: flex; gap: 0.9rem; margin-top: 2rem; }
+        .social-link {
+            width: 46px; height: 46px; border: 1.5px solid var(--burgundy); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; color: var(--burgundy);
+            text-decoration: none; transition: all 0.3s; font-size: 1rem;
+        }
+        .social-link:hover { background: var(--burgundy); color: white; transform: translateY(-3px); }
+        .map-container { min-height: 500px; }
+        .map-container iframe { width: 100%; height: 100%; min-height: 500px; border: none; display: block; filter: sepia(20%) contrast(1.1); }
+
+        /* ── CTA FINAL ── */
+        #cta-final {
+            background: var(--dark); text-align: center; padding: 7rem 5%; position: relative; overflow: hidden;
+        }
+        #cta-final::before {
+            content: 'ZIN'; position: absolute; font-family: 'Playfair Display', serif;
+            font-size: 30vw; font-weight: 700; color: rgba(255,255,255,0.025);
+            top: 50%; left: 50%; transform: translate(-50%,-50%); white-space: nowrap; pointer-events: none;
+        }
+        .cta-final-title { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 4rem); color: var(--cream); margin-bottom: 0.8rem; position: relative; }
+        .cta-final-sub { color: rgba(247,240,230,0.5); font-size: 0.97rem; margin-bottom: 3rem; position: relative; }
+        .btn-wsp-big {
+            display: inline-flex; align-items: center; gap: 1rem;
+            background: #25D366; color: white; padding: 1.3rem 3.5rem;
+            text-decoration: none; font-weight: 700; font-size: 1rem;
+            letter-spacing: 1px; border-radius: 50px; transition: all 0.3s;
+            box-shadow: 0 8px 35px rgba(37,211,102,0.3); position: relative;
+        }
+        .btn-wsp-big:hover { transform: translateY(-4px); box-shadow: 0 18px 50px rgba(37,211,102,0.45); background: #1fba58; }
+        .btn-wsp-big i { font-size: 1.5rem; }
+
+        /* ── FOOTER ── */
+        footer { background: #080503; color: rgba(247,240,230,0.45); padding: 3.5rem 5%; text-align: center; }
+        .footer-logo { margin-bottom: 1.8rem; }
+        .footer-logo img { height: 52px; opacity: 0.75; }
+        footer p { font-size: 0.8rem; line-height: 2; }
+        footer a { color: var(--gold); text-decoration: none; }
+        .footer-divider { width: 40px; height: 1px; background: rgba(247,240,230,0.2); margin: 1.5rem auto; }
+
+        /* ── WSP FLOAT ── */
+        .wsp-float {
+            position: fixed; bottom: 2.2rem; right: 2.2rem; z-index: 9999;
+            width: 62px; height: 62px; background: #25D366; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4); text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s; animation: pulse-wsp 2.5s infinite;
+        }
+        .wsp-float:hover { transform: scale(1.12); box-shadow: 0 10px 35px rgba(37,211,102,0.55); }
+        .wsp-float i { color: white; font-size: 2rem; }
+        .wsp-tooltip {
+            position: absolute; right: 75px; background: rgba(26,16,7,0.9); color: var(--cream);
+            font-size: 0.75rem; white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px;
+            opacity: 0; pointer-events: none; transition: opacity 0.3s;
+        }
+        .wsp-float:hover .wsp-tooltip { opacity: 1; }
+
+        /* ── KEYFRAMES ── */
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+        @keyframes bounce {
+            0%,100% { transform: translateX(-50%) translateY(0); }
+            50%      { transform: translateX(-50%) translateY(-12px); }
+        }
+        @keyframes pulse-wsp {
+            0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+            50%      { box-shadow: 0 4px 20px rgba(37,211,102,0.4), 0 0 0 14px rgba(37,211,102,0.1); }
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 960px) {
+            .historia-grid, .reservas-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+            .ubicacion-grid { grid-template-columns: 1fr; }
+            .menu-grid { grid-template-columns: repeat(2,1fr); }
+            .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3,240px); }
+            .gi:first-child { grid-row: span 1; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .historia-image { display: none; }
+            .historia-stats { gap: 2rem; }
+        }
+        @media (max-width: 580px) {
+            .menu-grid { grid-template-columns: 1fr; }
+            section { padding: 5rem 5%; }
+            .form-row { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; grid-template-rows: repeat(6,220px); }
+        }
+
+        /* Mobile Nav Overlay */
+        .mobile-nav {
+            display: none; position: fixed; inset: 0; background: rgba(26,16,7,0.97);
+            z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem;
+        }
+        .mobile-nav.open { display: flex; }
+        .mobile-nav a { color: var(--cream); text-decoration: none; font-size: 1.5rem; font-family: 'Playfair Display', serif; font-style: italic; transition: color 0.3s; }
+        .mobile-nav a:hover { color: var(--gold); }
+        .mobile-nav-close { position: absolute; top: 2rem; right: 2rem; background: none; border: none; color: var(--cream); font-size: 1.8rem; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<!-- WhatsApp Flotante -->
+<a href="https://wa.me/56939162342?text=Hola!%20Quiero%20hacer%20una%20reserva%20en%20Restaurant%20Zinfandel%20%F0%9F%8D%B7" class="wsp-float" target="_blank" title="Reservar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wsp-tooltip">Reservar ahora</span>
+</a>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileClose"><i class="fas fa-times"></i></button>
+    <a href="#historia" onclick="closeMobileNav()">Historia</a>
+    <a href="#menu" onclick="closeMobileNav()">Menú</a>
+    <a href="#galeria" onclick="closeMobileNav()">Galería</a>
+    <a href="#reservas" onclick="closeMobileNav()">Reservas</a>
+    <a href="#ubicacion" onclick="closeMobileNav()">Ubicación</a>
+    <a href="https://wa.me/56939162342" target="_blank" style="color: var(--gold);">Reservar →</a>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+    <div class="nav-logo">
+        <a href="#hero">
+            <img src="https://static.wixstatic.com/media/c1a5e8_0f6d5c61bf5f461daeab1d68b8848e1f.png" alt="Zinfandel"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <span style="display:none; font-family:'Playfair Display',serif; font-size:1.8rem; color:var(--cream); font-style:italic;">Zinfandel</span>
+        </a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="https://wa.me/56939162342" class="nav-cta" target="_blank">Reservar</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- ═══════════════════════════════════════ HERO -->
+<section id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <p class="hero-eyebrow"><i class="fas fa-map-marker-alt" style="font-size:0.6rem; margin-right:6px;"></i>Viña Terramater · Isla de Maipo, Chile</p>
+        <h1 class="hero-title">Zin<span>fandel</span></h1>
+        <div class="hero-divider"></div>
+        <p class="hero-subtitle">Gastronomía Mediterránea &amp; Chilena desde 2014</p>
+        <div class="hero-buttons">
+            <a href="#reservas" class="btn-primary">Hacer Reserva</a>
+            <a href="#menu" class="btn-outline">Ver Menú</a>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <span>Descubrir</span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ HISTORIA -->
+<section id="historia">
+    <div class="historia-grid">
+        <div class="historia-image reveal-left" style="position:relative;">
+            <img src="https://static.wixstatic.com/media/c1a5e8_4bdc61a6ad7348d896ac14e12ad2c982.jpg"
+                 alt="Historia Restaurant Zinfandel"
+                 onerror="this.src='https://foto2.sluurpy.com/locali/cl/4311434/69148627.jpg'">
+            <div class="historia-image-frame"></div>
+        </div>
+        <div class="historia-text reveal-right">
+            <span class="section-eyebrow">Nuestra Historia</span>
+            <h2 class="section-title">Pasión por el <em>vino</em><br>y la gastronomía</h2>
+            <div class="divider-line"></div>
+            <p>En el año 2014 comenzó nuestra historia. Terramater y Serial, dos empresas unidas por su pasión por el vino y la gastronomía, se unieron para crear Zinfandel.</p>
+            <p>Zinfandel, una cepa italiana de vino suave y perfecta para acompañar pastas —de aquí el nombre de nuestro restaurante. Terramater nos brinda esta cepa en ensamblaje con Syrah, convirtiéndose en uno de los vinos emblemáticos de la Viña.</p>
+            <p>Ubicados en el corazón de Viña Terramater, ofrecemos una experiencia única rodeados de viñedos, con terraza y jardín en plena naturaleza.</p>
+            <div class="historia-stats">
+                <div>
+                    <div class="stat-num counter" data-target="10" data-suffix="+">0</div>
+                    <div class="stat-lbl">Años de historia</div>
+                </div>
+                <div>
+                    <div class="stat-num counter" data-target="134" data-suffix="+">0</div>
+                    <div class="stat-lbl">Reseñas positivas</div>
+                </div>
+                <div>
+                    <div class="stat-num" style="font-size:2.5rem;">#<span class="counter" data-target="1" data-suffix="">0</span></div>
+                    <div class="stat-lbl">En Isla de Maipo</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ MENÚ -->
+<section id="menu">
+    <div class="menu-header reveal">
+        <span class="section-eyebrow">Lo que ofrecemos</span>
+        <h2 class="section-title">Nuestro <em>Menú</em></h2>
+        <div class="divider-line"></div>
+        <p style="color:#999; max-width:520px; margin:0 auto; font-size:0.94rem; line-height:1.8;">Ingredientes frescos, recetas auténticas y el maridaje perfecto con los vinos de Terramater.</p>
+    </div>
+    <div class="menu-grid">
+        <div class="menu-card reveal" style="transition-delay:.05s">
+            <div class="menu-card-img">
+                <img src="https://static.wixstatic.com/media/c1a5e8_3e8aa13e602949638ebbc7b6687253c0~mv2.jpg" alt="Pastas">
+            </div>
+            <div class="menu-card-body">
+                <div class="menu-card-cat">Especialidad</div>
+                <div class="menu-card-name">Pastas Artesanales</div>
+                <div class="menu-card-desc">Elaboradas con recetas italianas tradicionales, perfectas para maridar con nuestro Zinfandel Syrah.</div>
+            </div>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:.15s">
+            <div class="menu-card-img">
+                <img src="https://static.wixstatic.com/media/c1a5e8_71a7a25d4dad438aa164e050b2f98c5d~mv2.jpg" alt="Carnes">
+            </div>
+            <div class="menu-card-body">
+                <div class="menu-card-cat">Parrilla</div>
+                <div class="menu-card-name">Carnes a la Parrilla</div>
+                <div class="menu-card-desc">Cortes premium como el Tomahawk, preparados con técnicas de cocina mediterránea y fuego lento.</div>
+            </div>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:.25s">
+            <div class="menu-card-img">
+                <img src="https://static.wixstatic.com/media/c1a5e8_17a192e00d224b27a389de763ba82a6b~mv2.jpg" alt="Pescados">
+            </div>
+            <div class="menu-card-body">
+                <div class="menu-card-cat">Del Mar</div>
+                <div class="menu-card-name">Pescados &amp; Ceviche</div>
+                <div class="menu-card-desc">Preparaciones frescas del mar con ingredientes de temporada y sabores vibrantes del Mediterráneo.</div>
+            </div>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:.05s">
+            <div class="menu-card-img">
+                <img src="https://static.wixstatic.com/media/c1a5e8_616f593cdca540e09a9b6d032f65c66a~mv2.jpg" alt="Ensaladas">
+            </div>
+            <div class="menu-card-body">
+                <div class="menu-card-cat">Entradas</div>
+                <div class="menu-card-name">Ensaladas &amp; Entradas</div>
+                <div class="menu-card-desc">Opciones frescas y vegetarianas con productos de temporada y aliños artesanales.</div>
+            </div>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:.15s">
+            <div class="menu-card-img">
+                <img src="https://foto2.sluurpy.com/locali/cl/4311434/69148621.jpg"
+                     onerror="this.src='https://static.wixstatic.com/media/c1a5e8_2fbfcc96bda14435bbc4786bdc2b196a~mv2.jpg'"
+                     alt="Postres">
+            </div>
+            <div class="menu-card-body">
+                <div class="menu-card-cat">Dulce Final</div>
+                <div class="menu-card-name">Postres &amp; Repostería</div>
+                <div class="menu-card-desc">Creaciones dulces artesanales elaboradas cada día para el cierre perfecto de tu experiencia.</div>
+            </div>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:.25s">
+            <div class="menu-card-img">
+                <img src="https://foto2.sluurpy.com/locali/cl/4311434/69148616.jpg"
+                     onerror="this.src='https://static.wixstatic.com/media/c1a5e8_4bdc61a6ad7348d896ac14e12ad2c982.jpg'"
+                     alt="Vinos">
+            </div>
+            <div class="menu-card-body">
+                <div class="menu-card-cat">Bodega</div>
+                <div class="menu-card-name">Vinos Terramater</div>
+                <div class="menu-card-desc">Directamente de la viña que nos cobija. Carta exclusiva con etiquetas seleccionadas de la cosecha.</div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-cta reveal">
+        <a href="https://wa.me/56939162342?text=Hola!%20Me%20gustar%C3%ADa%20ver%20la%20carta%20completa%20de%20Zinfandel%20%F0%9F%8D%B7" class="btn-wsp-menu" target="_blank">
+            <i class="fab fa-whatsapp"></i>&nbsp; Ver Carta Completa
+        </a>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ PARALLAX STRIP -->
+<div class="parallax-strip">
+    <div class="parallax-strip-bg" id="stripBg"></div>
+    <div class="parallax-strip-overlay"></div>
+    <div class="parallax-strip-content reveal">
+        <blockquote>"Una experiencia gastronómica única, rodeada de viñedos en el corazón de Isla de Maipo"</blockquote>
+        <cite>— #1 Restaurante en Isla de Maipo · TripAdvisor</cite>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════ GALERÍA -->
+<section id="galeria">
+    <div class="galeria-header reveal">
+        <span class="section-eyebrow">Nuestro espacio</span>
+        <h2 class="section-title">Una experiencia <em>visual</em></h2>
+        <div class="divider-line"></div>
+    </div>
+    <div class="gallery-grid">
+        <div class="gi">
+            <img src="https://foto2.sluurpy.com/locali/cl/4311434/69148627.jpg" alt="Restaurante Zinfandel">
+            <div class="gi-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gi">
+            <img src="https://static.wixstatic.com/media/c1a5e8_3e8aa13e602949638ebbc7b6687253c0~mv2.jpg" alt="Plato pasta">
+            <div class="gi-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gi">
+            <img src="https://static.wixstatic.com/media/c1a5e8_71a7a25d4dad438aa164e050b2f98c5d~mv2.jpg" alt="Carne">
+            <div class="gi-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gi">
+            <img src="https://foto2.sluurpy.com/locali/cl/4311434/69148611.jpg"
+                 onerror="this.src='https://static.wixstatic.com/media/c1a5e8_17a192e00d224b27a389de763ba82a6b~mv2.jpg'"
+                 alt="Ambiente">
+            <div class="gi-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gi">
+            <img src="https://foto2.sluurpy.com/locali/cl/4311434/69148600.jpg"
+                 onerror="this.src='https://static.wixstatic.com/media/c1a5e8_616f593cdca540e09a9b6d032f65c66a~mv2.jpg'"
+                 alt="Plato">
+            <div class="gi-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gi">
+            <img src="https://foto2.sluurpy.com/locali/cl/4311434/69148590.jpg"
+                 onerror="this.src='https://static.wixstatic.com/media/c1a5e8_4bdc61a6ad7348d896ac14e12ad2c982.jpg'"
+                 alt="Viñedo">
+            <div class="gi-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ RESERVAS -->
+<section id="reservas">
+    <div class="reservas-grid">
+        <div class="reservas-text reveal-left">
+            <span class="section-eyebrow">Reserva tu mesa</span>
+            <h2 class="section-title">Una experiencia<br>que <em>recordarás</em></h2>
+            <div class="divider-line" style="background: linear-gradient(90deg, var(--gold), rgba(247,240,230,0.3));"></div>
+            <p>Reserva tu mesa y vive una experiencia gastronómica única en el corazón de Viña Terramater. También puedes contactarnos directamente por WhatsApp.</p>
+            <div class="horarios">
+                <div class="horario-item">
+                    <span class="day">Lunes a Jueves</span>
+                    <span class="time">10:00 – 21:00</span>
+                </div>
+                <div class="horario-item">
+                    <span class="day">Viernes y Sábado</span>
+                    <span class="time">10:00 – 22:00</span>
+                </div>
+                <div class="horario-item">
+                    <span class="day">Domingo y Festivos</span>
+                    <span class="time">10:00 – 19:00</span>
+                </div>
+                <div class="horario-item" style="border:none; padding-top:0.5rem;">
+                    <span class="day" style="color:rgba(247,240,230,0.35); font-size:0.78rem;">* La cocina cierra 1 hora antes del cierre</span>
+                </div>
+            </div>
+            <a href="https://wa.me/56939162342?text=Hola!%20Quiero%20hacer%20una%20reserva" class="wsp-direct" target="_blank">
+                <i class="fab fa-whatsapp" style="font-size:1.2rem;"></i> Reservar directo por WhatsApp
+            </a>
+        </div>
+        <div class="reserva-form reveal-right">
+            <div class="form-title">Reservar Mesa</div>
+            <p class="form-subtitle">Te confirmaremos por WhatsApp a la brevedad</p>
+            <form id="reservaForm" onsubmit="enviarReserva(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" id="f-nombre" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono</label>
+                        <input type="tel" id="f-tel" placeholder="+56 9 XXXX XXXX" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Fecha</label>
+                        <input type="date" id="f-fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Hora</label>
+                        <input type="time" id="f-hora" min="10:00" max="21:00" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Número de personas</label>
+                    <select id="f-personas">
+                        <option>1 persona</option>
+                        <option>2 personas</option>
+                        <option selected>3 – 4 personas</option>
+                        <option>5 – 6 personas</option>
+                        <option>7 – 10 personas</option>
+                        <option>Más de 10 (Evento)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Comentarios (opcional)</label>
+                    <textarea id="f-comentarios" placeholder="Alergias, celebración especial, preferencias..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <i class="fab fa-whatsapp" style="font-size:1.1rem;"></i> Enviar Reserva por WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ UBICACIÓN -->
+<section id="ubicacion">
+    <div class="ubicacion-grid">
+        <div class="ubicacion-info reveal-left">
+            <span class="section-eyebrow">Encuéntranos</span>
+            <h2 class="section-title">Cómo <em>llegar</em></h2>
+            <div class="divider-line"></div>
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                    <div class="contact-label">Dirección</div>
+                    <div class="contact-value">Av. Balmaceda 4900, Interior Viña Terramater<br>Isla de Maipo, Región Metropolitana</div>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                <div>
+                    <div class="contact-label">WhatsApp / Reservas</div>
+                    <div class="contact-value"><a href="https://wa.me/56939162342">+56 9 3916 2342</a></div>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                    <div class="contact-label">Correo Electrónico</div>
+                    <div class="contact-value"><a href="mailto:zinfandelrestaurant@gmail.com">zinfandelrestaurant@gmail.com</a></div>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-car"></i></div>
+                <div>
+                    <div class="contact-label">Estacionamiento</div>
+                    <div class="contact-value">Gratuito en el lugar · Pet friendly · WiFi</div>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/restaurantzinfandel/" class="social-link" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/RestaurantZinFandel/" class="social-link" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/56939162342" class="social-link" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe
+                src="https://maps.google.com/maps?q=Restaurant+Zinfandel+Isla+de+Maipo+Balmaceda+4900&output=embed&z=16"
+                allowfullscreen loading="lazy"
+                title="Ubicación Restaurant Zinfandel">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ CTA FINAL -->
+<section id="cta-final">
+    <p class="reveal" style="font-size:0.72rem; letter-spacing:5px; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; position:relative;">¿Listo para visitarnos?</p>
+    <h2 class="cta-final-title reveal">Reserva tu mesa hoy</h2>
+    <p class="cta-final-sub reveal">Solo por reservación previa · Te esperamos en Viña Terramater</p>
+    <a href="https://wa.me/56939162342?text=Hola!%20Quiero%20hacer%20una%20reserva%20en%20Restaurant%20Zinfandel%20%F0%9F%8D%B7" class="btn-wsp-big reveal" target="_blank">
+        <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
+    </a>
+</section>
+
+<!-- ═══════════════════════════════════════ FOOTER -->
+<footer>
+    <div class="footer-logo">
+        <img src="https://static.wixstatic.com/media/c1a5e8_0f6d5c61bf5f461daeab1d68b8848e1f.png" alt="Zinfandel"
+             onerror="this.style.display='none'">
+    </div>
+    <p>Av. Balmaceda 4900, Interior Viña Terramater · Isla de Maipo, Chile</p>
+    <p><a href="https://www.instagram.com/restaurantzinfandel/" target="_blank">@restaurantzinfandel</a> &nbsp;·&nbsp; <a href="tel:+56939162342">+56 9 3916 2342</a></p>
+    <div class="footer-divider"></div>
+    <p style="font-size:0.72rem; opacity:0.4;">© 2025 Restaurant Zinfandel · Todos los derechos reservados</p>
+</footer>
+
+<!-- ═══════════════════════════════════════ LIGHTBOX -->
+<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.93); z-index:9998; align-items:center; justify-content:center; cursor:zoom-out;" onclick="closeLightbox()">
+    <img id="lbImg" src="" style="max-width:90vw; max-height:90vh; object-fit:contain; border-radius:2px; box-shadow:0 0 60px rgba(0,0,0,0.8);">
+    <button onclick="closeLightbox()" style="position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:white;font-size:2rem;cursor:pointer;"><i class="fas fa-times"></i></button>
+</div>
+
+<script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 80);
+    }, { passive: true });
+
+    // Hero parallax
+    const heroBg = document.getElementById('heroBg');
+    const stripBg = document.getElementById('stripBg');
+    window.addEventListener('scroll', () => {
+        const s = window.scrollY;
+        if (s < window.innerHeight * 1.5)
+            heroBg.style.transform = `scale(1.12) translateY(${s * 0.25}px)`;
+        const strip = document.querySelector('.parallax-strip');
+        if (strip) {
+            const rect = strip.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0)
+                stripBg.style.transform = `translateY(${(s - strip.offsetTop) * 0.2}px)`;
+        }
+    }, { passive: true });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('active'); revealObs.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    const counterObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            const el = e.target;
+            const target = parseInt(el.dataset.target);
+            const suffix = el.dataset.suffix || '';
+            let current = 0;
+            const step = target / 70;
+            const timer = setInterval(() => {
+                current = Math.min(current + step, target);
+                el.textContent = Math.round(current) + suffix;
+                if (current >= target) clearInterval(timer);
+            }, 18);
+            counterObs.unobserve(el);
+        });
+    }, { threshold: 0.6 });
+    counters.forEach(el => counterObs.observe(el));
+
+    // Form → WhatsApp
+    function enviarReserva(e) {
+        e.preventDefault();
+        const nombre   = document.getElementById('f-nombre').value;
+        const tel      = document.getElementById('f-tel').value;
+        const fecha    = document.getElementById('f-fecha').value;
+        const hora     = document.getElementById('f-hora').value;
+        const personas = document.getElementById('f-personas').value;
+        const coment   = document.getElementById('f-comentarios').value;
+        const fechaFmt = fecha
+            ? new Date(fecha + 'T00:00:00').toLocaleDateString('es-CL', { weekday:'long', year:'numeric', month:'long', day:'numeric' })
+            : 'Por confirmar';
+        const msg =
+            `Hola! Quiero hacer una reserva en Restaurant Zinfandel 🍷\n\n` +
+            `👤 Nombre: ${nombre}\n` +
+            `📞 Teléfono: ${tel}\n` +
+            `📅 Fecha: ${fechaFmt}\n` +
+            `🕐 Hora: ${hora}\n` +
+            `👥 Personas: ${personas}` +
+            (coment ? `\n💬 Comentarios: ${coment}` : '');
+        window.open('https://wa.me/56939162342?text=' + encodeURIComponent(msg), '_blank');
+    }
+
+    // Hamburger / Mobile Nav
+    document.getElementById('hamburger').addEventListener('click', () => {
+        document.getElementById('mobileNav').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', closeMobileNav);
+    function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
+
+    // Lightbox
+    document.querySelectorAll('.gi').forEach(item => {
+        item.addEventListener('click', () => {
+            const src = item.querySelector('img').src;
+            document.getElementById('lbImg').src = src;
+            const lb = document.getElementById('lightbox');
+            lb.style.display = 'flex';
+        });
+    });
+    function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // Set min date on reservation form
+    document.getElementById('f-fecha').min = new Date().toISOString().split('T')[0];
+</script>
+</body>
+</html>

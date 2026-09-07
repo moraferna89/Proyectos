@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jabones Artesanales — Natural, hecho a mano, con amor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream:        #F4EDE0;
+    --cream-deep:   #ECE2CE;
+    --cream-light:  #FAF6EE;
+    --olive:        #5C5A3F;
+    --olive-soft:   #8A8868;
+    --earth:        #8B6F4E;
+    --earth-light:  #C9B391;
+    --wine:         #6B2D2D;
+    --ink:          #2B2620;
+    --ink-soft:     #6C645A;
+    --line:         rgba(43, 38, 32, 0.12);
+
+    --f-serif: "Cormorant Garamond", "Times New Roman", serif;
+    --f-sans:  "Inter", system-ui, -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--f-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+
+  /* ─── Typography ─── */
+  .eyebrow {
+    font-family: var(--f-sans);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--wine);
+    font-weight: 500;
+  }
+  h1, h2, h3 { font-family: var(--f-serif); font-weight: 400; color: var(--ink); letter-spacing: -0.01em; }
+  h1 { font-size: clamp(56px, 9vw, 144px); line-height: 0.95; }
+  h2 { font-size: clamp(40px, 5.5vw, 78px); line-height: 1.02; }
+  h3 { font-size: clamp(26px, 2.4vw, 36px); line-height: 1.1; }
+  .lead {
+    font-family: var(--f-serif);
+    font-size: clamp(20px, 1.8vw, 26px);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  /* ─── Layout ─── */
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 40px; }
+  section { position: relative; }
+
+  /* ─── Nav ─── */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 22px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.4s ease, padding 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(0px);
+  }
+  .nav.scrolled {
+    background: rgba(244, 237, 224, 0.92);
+    backdrop-filter: blur(12px);
+    padding: 14px 40px;
+    box-shadow: 0 1px 0 var(--line);
+  }
+  .nav-logo {
+    font-family: var(--f-serif);
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo .heart {
+    color: var(--wine);
+    font-size: 14px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 38px;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .nav-links a {
+    position: relative;
+    padding: 6px 0;
+    color: var(--ink);
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0; height: 1px;
+    background: var(--wine);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--wine); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: background 0.25s, color 0.25s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--cream); }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+  }
+
+  /* ─── Hero ─── */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 140px 0 80px;
+    background: linear-gradient(180deg, var(--cream-light) 0%, var(--cream) 100%);
+  }
+  .hero-bg-leaf {
+    position: absolute;
+    top: 10%;
+    right: -60px;
+    width: 480px;
+    opacity: 0.18;
+    z-index: 1;
+    will-change: transform;
+  }
+  .hero-bg-leaf-2 {
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 380px;
+    opacity: 0.12;
+    z-index: 1;
+    transform: rotate(160deg);
+    will-change: transform;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 780px;
+  }
+  .hero h1 {
+    font-weight: 300;
+    margin: 24px 0 28px;
+  }
+  .hero h1 .ital {
+    font-style: italic;
+    color: var(--wine);
+    font-weight: 400;
+  }
+  .hero-lead {
+    max-width: 540px;
+    margin-bottom: 44px;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 34px;
+    background: var(--wine);
+    color: var(--cream);
+    border-radius: 999px;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: transform 0.25s, background 0.25s, box-shadow 0.25s;
+    box-shadow: 0 4px 14px rgba(107, 45, 45, 0.18);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    background: #5a2424;
+    box-shadow: 0 8px 24px rgba(107, 45, 45, 0.28);
+  }
+  .btn-primary .arrow { transition: transform 0.3s; }
+  .btn-primary:hover .arrow { transform: translateX(4px); }
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    transition: color 0.2s, border-color 0.2s, gap 0.25s;
+  }
+  .btn-ghost:hover { color: var(--wine); border-color: var(--wine); gap: 14px; }
+
+  .hero-product {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38vw;
+    max-width: 560px;
+    height: 70vh;
+    max-height: 720px;
+    z-index: 2;
+    border-radius: 280px 280px 12px 12px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px -30px rgba(43, 38, 32, 0.35);
+    will-change: transform;
+  }
+  .hero-product img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .hero-scroll-cue {
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero-scroll-cue .line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(180deg, transparent, var(--ink-soft));
+    animation: scrollLine 2.2s ease-in-out infinite;
+  }
+  @keyframes scrollLine {
+    0%, 100% { transform: scaleY(0.4); transform-origin: top; }
+    50% { transform: scaleY(1); }
+  }
+
+  .hero-marks {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .hero-marks .dot {
+    width: 4px; height: 4px; border-radius: 50%;
+    background: var(--wine);
+  }
+
+  @media (max-width: 980px) {
+    .hero-product {
+      position: relative;
+      width: 88%;
+      max-width: 420px;
+      height: 460px;
+      margin: 56px auto 0;
+      top: auto; right: auto; transform: none;
+    }
+    .hero { padding: 130px 0 60px; }
+    .hero-marks { display: none; }
+  }
+
+  /* ─── Marquee strip ─── */
+  .marquee {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 22px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee-track {
+    display: inline-flex;
+    gap: 60px;
+    animation: marquee 38s linear infinite;
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+  }
+  .marquee-track span {
+    display: inline-flex;
+    align-items: center;
+    gap: 60px;
+  }
+  .marquee-track .sep {
+    color: var(--wine);
+    font-style: normal;
+    font-size: 12px;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ─── Section header ─── */
+  .section-head {
+    text-align: center;
+    margin: 0 auto 70px;
+    max-width: 720px;
+  }
+  .section-head .eyebrow { display: inline-block; margin-bottom: 18px; }
+  .section-head h2 { margin-bottom: 18px; }
+  .section-head p {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+  .section-pad { padding: 140px 0; }
+  .section-pad-sm { padding: 110px 0; }
+
+  /* ─── Catálogo ─── */
+  .catalog {
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .catalog-leaf {
+    position: absolute;
+    top: 60px;
+    left: -80px;
+    width: 320px;
+    opacity: 0.1;
+    will-change: transform;
+  }
+  .catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px 40px;
+    position: relative;
+    z-index: 2;
+  }
+  @media (max-width: 980px) { .catalog-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .catalog-grid { grid-template-columns: 1fr; } }
+
+  .product {
+    cursor: pointer;
+  }
+  .product-img {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: var(--cream-deep);
+    border-radius: 2px;
+    position: relative;
+    margin-bottom: 22px;
+  }
+  .product-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .product:hover .product-img img { transform: scale(1.06); }
+  .product-tag {
+    position: absolute;
+    top: 18px; left: 18px;
+    background: var(--cream-light);
+    color: var(--wine);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+  .product-quick {
+    position: absolute;
+    bottom: 18px; left: 18px; right: 18px;
+    background: var(--ink);
+    color: var(--cream);
+    text-align: center;
+    padding: 13px 20px;
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s, transform 0.3s;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+  }
+  .product:hover .product-quick { opacity: 1; transform: translateY(0); }
+  .product-meta {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 18px;
+  }
+  .product-name {
+    font-family: var(--f-serif);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.15;
+  }
+  .product-name .ital { font-style: italic; color: var(--wine); }
+  .product-price {
+    font-family: var(--f-serif);
+    font-size: 22px;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .product-desc {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .product-notes {
+    margin-top: 14px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .product-notes span {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink-soft);
+  }
+
+  /* ─── About / Story ─── */
+  .about {
+    background: var(--cream-deep);
+    position: relative;
+    overflow: hidden;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 100px;
+    align-items: center;
+  }
+  @media (max-width: 980px) {
+    .about-grid { grid-template-columns: 1fr; gap: 60px; }
+  }
+  .about-text .eyebrow { margin-bottom: 24px; display: inline-block; }
+  .about-text h2 { margin-bottom: 32px; }
+  .about-text h2 .ital { font-style: italic; color: var(--wine); }
+  .about-text p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+    max-width: 520px;
+  }
+  .about-text .sig {
+    margin-top: 36px;
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 26px;
+    color: var(--ink);
+  }
+  .about-text .sig-sub {
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+  .about-imgs {
+    position: relative;
+    height: 600px;
+  }
+  .about-img {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px -20px rgba(43, 38, 32, 0.3);
+    will-change: transform;
+  }
+  .about-img img { width: 100%; height: 100%; object-fit: cover; }
+  .about-img-1 {
+    top: 0; left: 0;
+    width: 64%; height: 70%;
+  }
+  .about-img-2 {
+    bottom: 0; right: 0;
+    width: 56%; height: 56%;
+    border-radius: 200px 200px 4px 4px;
+  }
+  .about-stat {
+    position: absolute;
+    bottom: 36%;
+    left: -10%;
+    background: var(--cream-light);
+    padding: 24px 28px;
+    border-radius: 4px;
+    box-shadow: 0 16px 40px -16px rgba(43,38,32,0.2);
+    z-index: 3;
+  }
+  .about-stat .num {
+    font-family: var(--f-serif);
+    font-size: 56px;
+    line-height: 1;
+    color: var(--wine);
+  }
+  .about-stat .lbl {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 8px;
+  }
+  @media (max-width: 980px) {
+    .about-imgs { height: 480px; }
+    .about-stat { left: 4%; }
+  }
+
+  /* ─── Beneficios / Blog ─── */
+  .benefits {
+    background: var(--olive);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .benefits .section-head h2 { color: var(--cream-light); }
+  .benefits .section-head .eyebrow { color: var(--earth-light); }
+  .benefits .section-head p { color: rgba(244,237,224,0.7); }
+
+  .benefits-leaf {
+    position: absolute;
+    top: 10%; right: -10%;
+    width: 600px;
+    opacity: 0.08;
+    will-change: transform;
+  }
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(244,237,224,0.16);
+    border: 1px solid rgba(244,237,224,0.16);
+    position: relative;
+    z-index: 2;
+  }
+  @media (max-width: 900px) { .benefits-grid { grid-template-columns: 1fr; } }
+  .benefit {
+    background: var(--olive);
+    padding: 56px 44px;
+    transition: background 0.3s;
+  }
+  .benefit:hover { background: #525038; }
+  .benefit-num {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--earth-light);
+    margin-bottom: 28px;
+  }
+  .benefit h3 {
+    color: var(--cream-light);
+    margin-bottom: 14px;
+    font-weight: 400;
+  }
+  .benefit h3 .ital { font-style: italic; color: var(--earth-light); }
+  .benefit p {
+    color: rgba(244,237,224,0.72);
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  /* ─── Proceso (storytelling) ─── */
+  .process {
+    background: var(--cream);
+    overflow: hidden;
+  }
+  .process-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+  .process-row:last-child { margin-bottom: 0; }
+  .process-row.reverse { direction: rtl; }
+  .process-row.reverse > * { direction: ltr; }
+  @media (max-width: 900px) {
+    .process-row, .process-row.reverse { grid-template-columns: 1fr; direction: ltr; gap: 40px; margin-bottom: 80px; }
+  }
+  .process-img {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 30px 60px -30px rgba(43,38,32,0.35);
+  }
+  .process-img img { width: 100%; height: 100%; object-fit: cover; }
+  .process-text .num {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 72px;
+    color: var(--earth-light);
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+  .process-text h3 { margin-bottom: 20px; font-size: clamp(32px, 3vw, 48px); }
+  .process-text h3 .ital { font-style: italic; color: var(--wine); }
+  .process-text p {
+    color: var(--ink-soft);
+    max-width: 460px;
+    line-height: 1.7;
+  }
+
+  /* ─── Quote band ─── */
+  .quote-band {
+    background: var(--wine);
+    color: var(--cream-light);
+    padding: 140px 0;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .quote-band::before, .quote-band::after {
+    content: """;
+    position: absolute;
+    font-family: var(--f-serif);
+    font-size: 320px;
+    line-height: 1;
+    opacity: 0.08;
+    color: var(--cream-light);
+  }
+  .quote-band::before { top: 30px; left: 40px; }
+  .quote-band::after { content: """; bottom: -80px; right: 40px; }
+  .quote-band blockquote {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(28px, 3.6vw, 52px);
+    line-height: 1.25;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .quote-band .signoff {
+    margin-top: 36px;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(244,237,224,0.7);
+  }
+
+  /* ─── Contacto ─── */
+  .contact {
+    background: var(--cream-deep);
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-leaf {
+    position: absolute;
+    bottom: -120px; left: -120px;
+    width: 500px;
+    opacity: 0.1;
+    transform: rotate(45deg);
+    will-change: transform;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 50px; } }
+
+  .contact-card {
+    background: var(--cream-light);
+    padding: 56px 48px;
+    border-radius: 6px;
+    box-shadow: 0 30px 60px -30px rgba(43,38,32,0.2);
+  }
+  .contact-card .eyebrow { display: block; margin-bottom: 18px; }
+  .contact-card h2 { font-size: clamp(34px, 4vw, 56px); margin-bottom: 18px; }
+  .contact-card h2 .ital { font-style: italic; color: var(--wine); }
+  .contact-card p { color: var(--ink-soft); margin-bottom: 36px; max-width: 420px; }
+  .wa-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 32px;
+    background: #25D366;
+    color: white;
+    border-radius: 999px;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+  }
+  .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(37, 211, 102, 0.4); }
+
+  .contact-info {
+    padding-left: 20px;
+  }
+  .contact-info h3 {
+    font-style: italic;
+    color: var(--wine);
+    margin-bottom: 36px;
+    font-size: 28px;
+  }
+  .info-row {
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 20px;
+  }
+  .info-row:last-child { border-bottom: 1px solid var(--line); }
+  .info-row .k {
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding-top: 4px;
+  }
+  .info-row .v {
+    font-family: var(--f-serif);
+    font-size: 20px;
+    color: var(--ink);
+  }
+  .info-row .v small {
+    display: block;
+    font-family: var(--f-sans);
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+
+  /* ─── Footer ─── */
+  footer {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 80px 0 36px;
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+  .foot-brand h3 {
+    font-family: var(--f-serif);
+    color: var(--cream-light);
+    font-size: 32px;
+    margin-bottom: 14px;
+    letter-spacing: 0.08em;
+  }
+  .foot-brand h3 .heart { color: var(--wine); font-size: 16px; }
+  .foot-brand p {
+    color: rgba(244,237,224,0.6);
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 18px;
+    max-width: 320px;
+  }
+  .foot-col h4 {
+    font-family: var(--f-sans);
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--earth-light);
+    margin-bottom: 22px;
+    font-weight: 500;
+  }
+  .foot-col a {
+    display: block;
+    padding: 7px 0;
+    color: rgba(244,237,224,0.75);
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  .foot-col a:hover { color: var(--cream-light); }
+  .foot-bottom {
+    border-top: 1px solid rgba(244,237,224,0.12);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(244,237,224,0.5);
+    letter-spacing: 0.1em;
+  }
+  @media (max-width: 700px) {
+    .foot-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  }
+
+  /* ─── Floating WhatsApp ─── */
+  .fab-wa {
+    position: fixed;
+    bottom: 30px; right: 30px;
+    width: 60px; height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(37,211,102,0.45);
+    z-index: 90;
+    transition: transform 0.25s;
+    animation: pulseWa 2.4s ease-in-out infinite;
+  }
+  .fab-wa:hover { transform: scale(1.08); }
+  @keyframes pulseWa {
+    0%, 100% { box-shadow: 0 10px 30px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.5); }
+    50% { box-shadow: 0 10px 30px rgba(37,211,102,0.45), 0 0 0 14px rgba(37,211,102,0); }
+  }
+
+  /* ─── Reveal animations ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 1s cubic-bezier(0.2, 0.7, 0.2, 1), transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal.delay-1 { transition-delay: 0.12s; }
+  .reveal.delay-2 { transition-delay: 0.24s; }
+  .reveal.delay-3 { transition-delay: 0.36s; }
+  .reveal.delay-4 { transition-delay: 0.48s; }
+
+  .split-letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .split-letter.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- ─── Nav ─── -->
+<nav class="nav" id="nav" data-screen-label="nav">
+  <a href="#top" class="nav-logo">JABONES <span class="heart">♥</span> ARTESANALES</a>
+  <div class="nav-links">
+    <a href="#catalogo">Catálogo</a>
+    <a href="#historia">Historia</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+  <a href="#contacto" class="nav-cta">Pedir ahora</a>
+</nav>
+
+<!-- ─── Hero ─── -->
+<section class="hero" id="top" data-screen-label="hero">
+  <!-- decorative leaves (parallax) -->
+  <svg class="hero-bg-leaf" data-parallax="0.25" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 20 C 60 60, 50 120, 70 180 C 90 240, 110 300, 100 380" stroke="#2B2620" stroke-width="1.5" fill="none"/>
+    <path d="M100 60 C 70 65, 50 78, 38 92 C 56 96, 78 90, 100 78 Z" fill="#2B2620"/>
+    <path d="M100 95 C 130 100, 150 113, 162 128 C 144 130, 122 124, 100 112 Z" fill="#2B2620"/>
+    <path d="M100 140 C 70 145, 50 158, 38 172 C 56 176, 78 170, 100 158 Z" fill="#2B2620"/>
+    <path d="M100 180 C 130 185, 150 198, 162 213 C 144 215, 122 209, 100 197 Z" fill="#2B2620"/>
+    <path d="M100 225 C 70 230, 50 243, 38 257 C 56 261, 78 255, 100 243 Z" fill="#2B2620"/>
+    <path d="M100 268 C 130 273, 150 286, 162 301 C 144 303, 122 297, 100 285 Z" fill="#2B2620"/>
+    <path d="M100 310 C 70 315, 50 328, 38 342 C 56 346, 78 340, 100 328 Z" fill="#2B2620"/>
+  </svg>
+  <svg class="hero-bg-leaf-2" data-parallax="0.15" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 20 C 60 60, 50 120, 70 180 C 90 240, 110 300, 100 380" stroke="#5C5A3F" stroke-width="1.5" fill="none"/>
+    <path d="M100 60 C 70 65, 50 78, 38 92 C 56 96, 78 90, 100 78 Z" fill="#5C5A3F"/>
+    <path d="M100 95 C 130 100, 150 113, 162 128 C 144 130, 122 124, 100 112 Z" fill="#5C5A3F"/>
+    <path d="M100 140 C 70 145, 50 158, 38 172 C 56 176, 78 170, 100 158 Z" fill="#5C5A3F"/>
+    <path d="M100 180 C 130 185, 150 198, 162 213 C 144 215, 122 209, 100 197 Z" fill="#5C5A3F"/>
+    <path d="M100 225 C 70 230, 50 243, 38 257 C 56 261, 78 255, 100 243 Z" fill="#5C5A3F"/>
+  </svg>
+
+  <div class="wrap">
+    <div class="hero-content">
+      <span class="eyebrow reveal">Natural · Hecho a mano · Con amor</span>
+      <h1>
+        <span class="reveal delay-1">Jabones que</span><br/>
+        <span class="ital reveal delay-2">cuidan tu piel</span><br/>
+        <span class="reveal delay-3">como la naturaleza.</span>
+      </h1>
+      <p class="lead hero-lead reveal delay-3">
+        Pequeñas tandas, ingredientes nobles y la paciencia de lo hecho a mano.
+        Cada barra es una pausa para ti.
+      </p>
+      <div class="hero-ctas reveal delay-4">
+        <a href="#catalogo" class="btn-primary">
+          Ver el catálogo
+          <span class="arrow">→</span>
+        </a>
+        <a href="#historia" class="btn-ghost">Nuestra historia</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-product" data-parallax="-0.12">
+    <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=900&q=80" alt="Jabón artesanal sobre tabla de madera" />
+  </div>
+
+  <div class="hero-marks">
+    <span>EST. 2021</span>
+    <span class="dot"></span>
+    <span>Chillán · Chile</span>
+    <span class="dot"></span>
+    <span>100% Natural</span>
+  </div>
+
+  <div class="hero-scroll-cue">
+    <span>scroll</span>
+    <span class="line"></span>
+  </div>
+</section>
+
+<!-- ─── Marquee ─── -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>
+      Aceite de oliva <span class="sep">✦</span>
+      Miel pura <span class="sep">✦</span>
+      Lavanda del valle <span class="sep">✦</span>
+      Carbón activado <span class="sep">✦</span>
+      Café de altura <span class="sep">✦</span>
+      Avena molida <span class="sep">✦</span>
+      Rosa mosqueta <span class="sep">✦</span>
+      Caléndula <span class="sep">✦</span>
+    </span>
+    <span>
+      Aceite de oliva <span class="sep">✦</span>
+      Miel pura <span class="sep">✦</span>
+      Lavanda del valle <span class="sep">✦</span>
+      Carbón activado <span class="sep">✦</span>
+      Café de altura <span class="sep">✦</span>
+      Avena molida <span class="sep">✦</span>
+      Rosa mosqueta <span class="sep">✦</span>
+      Caléndula <span class="sep">✦</span>
+    </span>
+  </div>
+</div>
+
+<!-- ─── Catálogo ─── -->
+<section class="catalog section-pad" id="catalogo" data-screen-label="catalogo">
+  <svg class="catalog-leaf" data-parallax="0.2" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 20 C 60 60, 50 120, 70 180 C 90 240, 110 300, 100 380" stroke="#5C5A3F" stroke-width="1.5" fill="none"/>
+    <path d="M100 60 C 70 65, 50 78, 38 92 C 56 96, 78 90, 100 78 Z" fill="#5C5A3F"/>
+    <path d="M100 95 C 130 100, 150 113, 162 128 C 144 130, 122 124, 100 112 Z" fill="#5C5A3F"/>
+    <path d="M100 140 C 70 145, 50 158, 38 172 C 56 176, 78 170, 100 158 Z" fill="#5C5A3F"/>
+    <path d="M100 180 C 130 185, 150 198, 162 213 C 144 215, 122 209, 100 197 Z" fill="#5C5A3F"/>
+    <path d="M100 225 C 70 230, 50 243, 38 257 C 56 261, 78 255, 100 243 Z" fill="#5C5A3F"/>
+  </svg>
+
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="eyebrow">Nuestro catálogo</span>
+      <h2>Seis barras, <em style="font-style:italic;color:var(--wine)">infinitas pausas</em>.</h2>
+      <p>Cada jabón es elaborado en pequeñas tandas con curado mínimo de 4 semanas.</p>
+    </header>
+
+    <div class="catalog-grid">
+      <!-- Product 1 -->
+      <article class="product reveal">
+        <div class="product-img">
+          <span class="product-tag">Bestseller</span>
+          <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=700&q=80" alt="Jabón de miel y avena" />
+          <a href="#" class="product-quick wa-link" data-product="Miel & Avena">Pedir por WhatsApp →</a>
+        </div>
+        <div class="product-meta">
+          <h3 class="product-name">Miel <span class="ital">&amp; Avena</span></h3>
+          <span class="product-price">$4.900</span>
+        </div>
+        <p class="product-desc">Calmante y nutritivo. Para pieles sensibles que buscan un abrazo suave.</p>
+        <div class="product-notes">
+          <span>Miel</span><span>Avena</span><span>Aceite oliva</span>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="product reveal delay-1">
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=700&q=80" alt="Jabón de lavanda" />
+          <a href="#" class="product-quick wa-link" data-product="Lavanda Relajante">Pedir por WhatsApp →</a>
+        </div>
+        <div class="product-meta">
+          <h3 class="product-name"><span class="ital">Lavanda</span> Relajante</h3>
+          <span class="product-price">$5.200</span>
+        </div>
+        <p class="product-desc">Aroma floral y herbal. Para terminar el día como se merece.</p>
+        <div class="product-notes">
+          <span>Lavanda</span><span>Sales</span><span>Coco</span>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="product reveal delay-2">
+        <div class="product-img">
+          <span class="product-tag">Nuevo</span>
+          <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=700&q=80" alt="Jabón de carbón activado" />
+          <a href="#" class="product-quick wa-link" data-product="Carbón Activado">Pedir por WhatsApp →</a>
+        </div>
+        <div class="product-meta">
+          <h3 class="product-name">Carbón <span class="ital">Activado</span></h3>
+          <span class="product-price">$5.500</span>
+        </div>
+        <p class="product-desc">Purificante profundo. Ideal para pieles mixtas y rostros con brillo.</p>
+        <div class="product-notes">
+          <span>Carbón</span><span>Té verde</span><span>Menta</span>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="product reveal">
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=700&q=80" alt="Jabón de café" />
+          <a href="#" class="product-quick wa-link" data-product="Café Exfoliante">Pedir por WhatsApp →</a>
+        </div>
+        <div class="product-meta">
+          <h3 class="product-name">Café <span class="ital">Exfoliante</span></h3>
+          <span class="product-price">$5.200</span>
+        </div>
+        <p class="product-desc">Granos molidos para una exfoliación suave que despierta los sentidos.</p>
+        <div class="product-notes">
+          <span>Café</span><span>Cacao</span><span>Vainilla</span>
+        </div>
+      </article>
+
+      <!-- Product 5 -->
+      <article class="product reveal delay-1">
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=700&q=80" alt="Jabón de rosa mosqueta" />
+          <a href="#" class="product-quick wa-link" data-product="Rosa Mosqueta">Pedir por WhatsApp →</a>
+        </div>
+        <div class="product-meta">
+          <h3 class="product-name">Rosa <span class="ital">Mosqueta</span></h3>
+          <span class="product-price">$6.200</span>
+        </div>
+        <p class="product-desc">Regenerador para piel madura. Vitamina E y aceite prensado en frío.</p>
+        <div class="product-notes">
+          <span>Mosqueta</span><span>Karité</span><span>Vit. E</span>
+        </div>
+      </article>
+
+      <!-- Product 6 -->
+      <article class="product reveal delay-2">
+        <div class="product-img">
+          <span class="product-tag">Edición ltda.</span>
+          <img src="https://images.unsplash.com/photo-1606471191009-63994c53433b?w=700&q=80" alt="Jabón de caléndula" />
+          <a href="#" class="product-quick wa-link" data-product="Caléndula">Pedir por WhatsApp →</a>
+        </div>
+        <div class="product-meta">
+          <h3 class="product-name"><span class="ital">Caléndula</span> Suave</h3>
+          <span class="product-price">$5.800</span>
+        </div>
+        <p class="product-desc">Para piel reactiva y bebés. Pétalos macerados durante 40 días.</p>
+        <div class="product-notes">
+          <span>Caléndula</span><span>Almendras</span><span>Sin esencia</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Marquee 2 ─── -->
+<div class="marquee" aria-hidden="true" style="background:var(--wine)">
+  <div class="marquee-track" style="animation-direction: reverse;">
+    <span>
+      Despachos a todo Chile <span class="sep">✦</span>
+      Pequeñas tandas <span class="sep">✦</span>
+      Vegan friendly <span class="sep">✦</span>
+      Curado 4 semanas mínimo <span class="sep">✦</span>
+      Empaque biodegradable <span class="sep">✦</span>
+    </span>
+    <span>
+      Despachos a todo Chile <span class="sep">✦</span>
+      Pequeñas tandas <span class="sep">✦</span>
+      Vegan friendly <span class="sep">✦</span>
+      Curado 4 semanas mínimo <span class="sep">✦</span>
+      Empaque biodegradable <span class="sep">✦</span>
+    </span>
+  </div>
+</div>
+
+<!-- ─── About ─── -->
+<section class="about section-pad" id="historia" data-screen-label="historia">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="eyebrow">Nuestra historia</span>
+        <h2>Empezamos en la cocina, <span class="ital">terminamos en tu ducha</span>.</h2>
+        <p>
+          Todo comenzó un invierno del 2021, buscando un jabón que no irritara la piel de mi hija.
+          Cuatro recetas y muchas tandas después, los vecinos empezaron a pedirme barras.
+        </p>
+        <p>
+          Hoy somos un pequeño taller en Chillán que sigue haciendo cada jabón a mano,
+          con aceites prensados en frío, miel de apicultores locales y la misma paciencia del primer día.
+        </p>
+        <p>
+          No hacemos miles. Hacemos los que podemos hacer bien.
+        </p>
+        <div class="sig">— Camila Reyes</div>
+        <div class="sig-sub">Fundadora y jabonera</div>
+      </div>
+
+      <div class="about-imgs reveal delay-1">
+        <div class="about-img about-img-1" data-parallax="0.08">
+          <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=700&q=80" alt="Manos elaborando jabón" />
+        </div>
+        <div class="about-img about-img-2" data-parallax="-0.06">
+          <img src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?w=700&q=80" alt="Ingredientes naturales" />
+        </div>
+        <div class="about-stat reveal delay-2">
+          <div class="num">+2.400</div>
+          <div class="lbl">Barras curadas a mano</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Proceso (storytelling) ─── -->
+<section class="process section-pad" id="proceso" data-screen-label="proceso">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="eyebrow">El proceso</span>
+      <h2>Cuatro pasos, <em style="font-style:italic;color:var(--wine)">cuarenta días</em>.</h2>
+      <p>Desde que pesamos el aceite hasta que la barra llega a tus manos.</p>
+    </header>
+
+    <div class="process-row">
+      <div class="process-text reveal">
+        <div class="num">01</div>
+        <h3>Elegimos los <span class="ital">ingredientes</span>.</h3>
+        <p>Aceites de oliva y coco, mantecas de karité y cacao. Botánicos secados al sol y esencias puras. Nada que no podamos pronunciar.</p>
+      </div>
+      <div class="process-img reveal delay-1" data-parallax="0.06">
+        <img src="https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=900&q=80" alt="Ingredientes" />
+      </div>
+    </div>
+
+    <div class="process-row reverse">
+      <div class="process-text reveal">
+        <div class="num">02</div>
+        <h3>Mezclamos en <span class="ital">frío</span>.</h3>
+        <p>Saponificación en frío, sin alterar las propiedades de los aceites. Cada tanda son entre 12 y 20 barras, contadas con los dedos.</p>
+      </div>
+      <div class="process-img reveal delay-1" data-parallax="0.06">
+        <img src="https://images.unsplash.com/photo-1556228852-80b6e5eeff06?w=900&q=80" alt="Mezcla del jabón" />
+      </div>
+    </div>
+
+    <div class="process-row">
+      <div class="process-text reveal">
+        <div class="num">03</div>
+        <h3>Cortamos y <span class="ital">curamos</span>.</h3>
+        <p>La pasta reposa en moldes de madera por 48 horas. Luego cortamos a mano y dejamos curar al menos 4 semanas para que cada barra dure y espume como debe.</p>
+      </div>
+      <div class="process-img reveal delay-1" data-parallax="0.06">
+        <img src="https://images.unsplash.com/photo-1601612628452-9e99ced43524?w=900&q=80" alt="Curado del jabón" />
+      </div>
+    </div>
+
+    <div class="process-row reverse">
+      <div class="process-text reveal">
+        <div class="num">04</div>
+        <h3>Envolvemos con <span class="ital">cariño</span>.</h3>
+        <p>Papel kraft, sello a mano y un mensaje en cada caja. Empaque 100% biodegradable que puedes compostar sin culpa.</p>
+      </div>
+      <div class="process-img reveal delay-1" data-parallax="0.06">
+        <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=900&q=80&sat=-20" alt="Empaque del jabón" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Beneficios ─── -->
+<section class="benefits section-pad" id="beneficios" data-screen-label="beneficios">
+  <svg class="benefits-leaf" data-parallax="0.18" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 20 C 60 60, 50 120, 70 180 C 90 240, 110 300, 100 380" stroke="#F4EDE0" stroke-width="1.5" fill="none"/>
+    <path d="M100 60 C 70 65, 50 78, 38 92 C 56 96, 78 90, 100 78 Z" fill="#F4EDE0"/>
+    <path d="M100 95 C 130 100, 150 113, 162 128 C 144 130, 122 124, 100 112 Z" fill="#F4EDE0"/>
+    <path d="M100 140 C 70 145, 50 158, 38 172 C 56 176, 78 170, 100 158 Z" fill="#F4EDE0"/>
+    <path d="M100 180 C 130 185, 150 198, 162 213 C 144 215, 122 209, 100 197 Z" fill="#F4EDE0"/>
+    <path d="M100 225 C 70 230, 50 243, 38 257 C 56 261, 78 255, 100 243 Z" fill="#F4EDE0"/>
+  </svg>
+
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="eyebrow">¿Por qué artesanal?</span>
+      <h2>Razones que tu piel <em style="font-style:italic;color:var(--earth-light)">va a agradecer</em>.</h2>
+    </header>
+
+    <div class="benefits-grid">
+      <div class="benefit reveal">
+        <div class="benefit-num">i.</div>
+        <h3>Glicerina <span class="ital">natural</span></h3>
+        <p>El jabón industrial extrae la glicerina para venderla aparte. Nosotros la dejamos donde corresponde: en la barra, hidratando tu piel.</p>
+      </div>
+      <div class="benefit reveal delay-1">
+        <div class="benefit-num">ii.</div>
+        <h3>Sin <span class="ital">químicos</span> agresivos</h3>
+        <p>No usamos parabenos, SLS, EDTA ni colorantes sintéticos. Si no le servirías de comer a tu piel, no la pongas sobre ella.</p>
+      </div>
+      <div class="benefit reveal delay-2">
+        <div class="benefit-num">iii.</div>
+        <h3>Curado <span class="ital">de verdad</span></h3>
+        <p>Cuatro semanas mínimo. El agua se evapora, la barra endurece, dura el doble y respeta tu pH.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-num">iv.</div>
+        <h3>Trazabilidad <span class="ital">completa</span></h3>
+        <p>Conocemos a quien nos vende la miel, el aceite y los pétalos. Cada barra tiene número de tanda y fecha de elaboración.</p>
+      </div>
+      <div class="benefit reveal delay-1">
+        <div class="benefit-num">v.</div>
+        <h3>Cero <span class="ital">plástico</span></h3>
+        <p>Empaque en papel kraft, hilo natural y caja reciclada. Una barra de jabón reemplaza tres botellas de gel de ducha.</p>
+      </div>
+      <div class="benefit reveal delay-2">
+        <div class="benefit-num">vi.</div>
+        <h3>Pequeñas <span class="ital">tandas</span></h3>
+        <p>No hacemos stock para meses. Cada lote sale fresco del taller, con la concentración de aceites en su punto justo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Quote band ─── -->
+<section class="quote-band" data-screen-label="quote">
+  <div class="wrap">
+    <blockquote class="reveal">
+      "Llevo tres meses usando el de miel &amp; avena y mi dermatitis simplemente desapareció.
+      No es magia, es un jabón hecho como debe ser."
+    </blockquote>
+    <div class="signoff reveal delay-1">— Paulina M., clienta desde 2024</div>
+  </div>
+</section>
+
+<!-- ─── Contacto ─── -->
+<section class="contact section-pad" id="contacto" data-screen-label="contacto">
+  <svg class="contact-leaf" data-parallax="0.14" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 20 C 60 60, 50 120, 70 180 C 90 240, 110 300, 100 380" stroke="#5C5A3F" stroke-width="1.5" fill="none"/>
+    <path d="M100 60 C 70 65, 50 78, 38 92 C 56 96, 78 90, 100 78 Z" fill="#5C5A3F"/>
+    <path d="M100 95 C 130 100, 150 113, 162 128 C 144 130, 122 124, 100 112 Z" fill="#5C5A3F"/>
+    <path d="M100 140 C 70 145, 50 158, 38 172 C 56 176, 78 170, 100 158 Z" fill="#5C5A3F"/>
+    <path d="M100 180 C 130 185, 150 198, 162 213 C 144 215, 122 209, 100 197 Z" fill="#5C5A3F"/>
+  </svg>
+
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <span class="eyebrow">Hacer un pedido</span>
+        <h2>Pidamos por <span class="ital">WhatsApp</span>.</h2>
+        <p>Cuéntanos qué jabones te interesan y a qué comuna despachamos.
+          Respondemos de lunes a sábado, antes de que se enfríe el café.</p>
+        <a href="#" class="wa-btn wa-link" data-product="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l.601.955-1.002 3.648 3.748-.984.632.422zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.494.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/>
+          </svg>
+          Escribir por WhatsApp
+        </a>
+      </div>
+
+      <div class="contact-info">
+        <h3 class="reveal delay-1">El taller</h3>
+        <div class="info-row reveal delay-1">
+          <div class="k">WhatsApp</div>
+          <div class="v">+56 9 1234 5678<small>Lun a Sáb, 10:00 – 19:00</small></div>
+        </div>
+        <div class="info-row reveal delay-2">
+          <div class="k">Despachos</div>
+          <div class="v">A todo Chile<small>Starken · Chilexpress · Retiro en Chillán</small></div>
+        </div>
+        <div class="info-row reveal delay-2">
+          <div class="k">Taller</div>
+          <div class="v">Chillán, Ñuble<small>Visitas con cita previa</small></div>
+        </div>
+        <div class="info-row reveal delay-3">
+          <div class="k">Pagos</div>
+          <div class="v">Transferencia · Mercado Pago<small>Pedido mínimo: 3 barras</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ─── -->
+<footer data-screen-label="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h3>JABONES <span class="heart">♥</span> ARTESANALES</h3>
+        <p>Natural · Hecho a mano · Con amor. Desde un taller pequeño en el sur de Chile.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Tienda</h4>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contacto">Cómo pedir</a>
+        <a href="#contacto">Despachos</a>
+      </div>
+      <div class="foot-col">
+        <h4>Marca</h4>
+        <a href="#historia">Historia</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#beneficios">Beneficios</a>
+      </div>
+      <div class="foot-col">
+        <h4>Redes</h4>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">Pinterest</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Jabones Artesanales · Chillán, Chile</span>
+      <span>Hecho con cariño · 100% Natural</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── Floating WhatsApp ─── -->
+<a href="#" class="fab-wa wa-link" data-product="" aria-label="Contactar por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l.601.955-1.002 3.648 3.748-.984.632.422zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.494.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/>
+  </svg>
+</a>
+
+<script>
+  // ─── Nav scroll state ───
+  const nav = document.getElementById('nav');
+  let lastY = 0;
+  function onScroll() {
+    const y = window.scrollY;
+    if (y > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+
+    // Parallax
+    document.querySelectorAll('[data-parallax]').forEach(el => {
+      const speed = parseFloat(el.dataset.parallax);
+      const rect = el.getBoundingClientRect();
+      const viewportH = window.innerHeight;
+      // Only when in or near viewport
+      if (rect.bottom > -200 && rect.top < viewportH + 200) {
+        const center = rect.top + rect.height / 2;
+        const offset = (center - viewportH / 2) * speed * -1;
+        el.style.transform = (el.dataset.baseTransform || '') + ` translate3d(0, ${offset}px, 0)`;
+      }
+    });
+    lastY = y;
+  }
+
+  // Preserve base transforms (e.g. rotate)
+  document.querySelectorAll('[data-parallax]').forEach(el => {
+    const computed = window.getComputedStyle(el).transform;
+    if (computed && computed !== 'none') el.dataset.baseTransform = computed;
+  });
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => { onScroll(); ticking = false; });
+      ticking = true;
+    }
+  }, { passive: true });
+  onScroll();
+
+  // ─── Reveal on scroll ───
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ─── WhatsApp links ───
+  const PHONE = '56912345678'; // Cambiar por número real
+  document.querySelectorAll('.wa-link').forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const product = a.dataset.product;
+      const msg = product
+        ? `¡Hola! Me interesa el jabón de *${product}*. ¿Tienen disponibilidad?`
+        : '¡Hola! Quiero hacer un pedido de jabones artesanales 🌿';
+      const url = `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    });
+  });
+
+  // ─── Smooth scroll for nav links (browser default with scroll-behavior:smooth) ───
+</script>
+
+</body>
+</html>

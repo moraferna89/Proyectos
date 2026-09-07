@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #181818;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.logo-img {
+    height: auto;
+    width: 60%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.logo-img:hover {
+    transform: translateY(-5px) scale(1.05); /* se levanta y crece un poco */
+}
+
+
+/* Menú principal */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    justify-content: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 160px;
+    background-color: #1c1c1c;
+    border-radius: 30px;
+    box-shadow: 3px 3px 8px #181818, -3px -3px 8px #232323; /* efecto neumorfismo */
+    transition: all 0.3s ease;
+    font-size: 16px;
+    text-align: center;
+}
+
+.menu-item:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 4px 4px 12px #080808, -4px -4px 12px #2a2a2a;
+    background-color: #2e2e2e;
+}
+
+.menu-item.active {
+    background-color: #fff;
+    color: #080808;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 2px 2px 2px #080808, -4px -4px 12px #4e4e4e;
+    z-index: 10; /* Sobrepone el botón */
+}
+.menu-item, .menu-item.active {
+    transition: all 0.3s ease;
+}
+
+
+/* Botón Mi Cuenta abajo */
+.bottom-menu {
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 1s ease forwards;
+    padding: 20px 0;
+}
+
+.user-icon img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 2px solid #444;
+    box-shadow: 3px 3px 10px #090909, -3px -3px 10px #2a2a2a;
+    transition: all 0.4s ease;
+}
+
+.user-icon img:hover {
+    transform: scale(1.15) rotate(-5deg);
+    border-color: #d6d6d6;
+    box-shadow: 4px 4px 12px #080808, -4px -4px 12px #535353;
+}
+
+/* ✨ Animaciones */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-btn {
+    width: 100%;
+    background-color: #1e1e2f;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: fadeIn 1s ease forwards;
+}
+
+.menu-btn:hover {
+    background-color: #535353;
+    transform: scale(1.03);
+}
+
+/* 🔹 Estilo especial para el botón de cerrar sesión */
+.logout {
+    background-color: #2a2a2a;
+    width: 85%;                  /* más angosto */
+    text-align: center;          /* texto centrado */
+    display: block;              /* asegura centrado con margin auto */
+    margin: 20px auto 25px auto; /* margen arriba y abajo */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.logout:hover {
+    background-color: #535353;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(146, 146, 146, 0.3);
+}
+

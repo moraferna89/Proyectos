@@ -1,0 +1,31 @@
+{
+  "sharpe": 11.6114,
+  "max_drawdown": 0.0221,
+  "win_rate": 0.523,
+  "profit_factor": 1.1083,
+  "n_trades": 5602,
+  "n_samples": 149990,
+  "wf_sharpe": 2.4134,
+  "wf_win_rate": 0.519,
+  "model_saved": true,
+  "reason": "modelo guardado",
+  "run_at": "2026-06-15 00:28:51",
+  "params": {
+    "SYMBOL": "EURUSD",
+    "TIMEFRAME": "M5",
+    "BARS": 200000,
+    "LABEL_HORIZON": 1,
+    "LABEL_THRESHOLD": 0.0002601424913031369,
+    "RSI_PERIOD": 12,
+    "EMA_FAST": 10,
+    "EMA_SLOW": 40,
+    "BB_PERIOD": 19,
+    "ATR_PERIOD": 7,
+    "n_estimators": 220,
+    "max_depth": 4,
+    "learning_rate": 0.121146,
+    "subsample": 0.843129,
+    "colsample_bytree": 0.690484,
+    "reg_lambda": 0.943228
+  }
+}

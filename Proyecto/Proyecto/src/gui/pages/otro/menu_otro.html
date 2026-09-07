@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menú</title>
+  <link rel="stylesheet" href="../../css/otro/menu_otro.css">
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+  <script src="../../js/otro/menu.js"></script>
+</head>
+<body>
+  <!-- Logo principal -->
+  <div class="logo">
+    <img src="../../../../assets/logos/logo.png" alt="Call Flash" class="logo-img">
+  </div>
+
+  <!-- Menú principal -->
+  <nav class="menu">
+    <a href="#" class="menu-item" onclick="abrir('inicio', this)">
+      🏠 Inicio
+    </a>
+    <a href="#" class="menu-item" onclick="abrir('mis_llamadas', this)">
+      ☎️ Llamadas
+    </a>
+    <a href="#" class="menu-item" onclick="abrir('mensajes', this)">
+      💬 Mensajes <span id="contador-mensajes" style="color:#3b82f6; font-weight:bold;"></span>
+    </a>
+
+  </nav>
+
+  <!-- Botón Mi Cuenta abajo -->
+  <div class="bottom-menu">
+    <a href="#" class="menu-item user-icon" onclick="abrir('mi_cuenta', this)">
+      <img src="../../../../assets/logos/user.png" alt="Mi Cuenta">
+    </a>
+  </div>
+  <button id="btn-cerrar-sesion" class="menu-btn logout">🔒 Cerrar sesión</button>
+</body>
+
+
+</html>

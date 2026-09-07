@@ -1,0 +1,21 @@
+{
+  "current_trial": 60,
+  "total_trials": 60,
+  "best_sharpe": 10.0079,
+  "best_params": {
+    "EMA_FAST": 10,
+    "EMA_SLOW": 40,
+    "LABEL_HORIZON": 1,
+    "LABEL_THRESHOLD": 0.0002601424913031369,
+    "RSI_PERIOD": 12,
+    "BB_PERIOD": 19,
+    "n_estimators": 220,
+    "max_depth": 4,
+    "learning_rate": 0.12114587793820378,
+    "subsample": 0.8431294634457571,
+    "colsample_bytree": 0.6904836544160005,
+    "reg_lambda": 0.9432283517944826
+  },
+  "status": "completed",
+  "updated_at": "2026-06-15 00:28:37"
+}

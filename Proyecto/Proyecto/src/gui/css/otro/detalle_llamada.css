@@ -1,0 +1,305 @@
+body {
+    margin: 0;
+    background: radial-gradient(circle at top left, #3f3f3f, #8b8b8b);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh; 
+    color: #fff;
+    display: flex;
+    justify-content: center; /* centra verticalmente */
+}
+
+.container {
+    min-width: 60%;
+    max-width: 60%;
+    margin: auto;
+    background-color: #111;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease forwards;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #e9e9e9;
+}
+
+.header button {
+    background: linear-gradient(45deg, #868686, #585858);
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.header button:hover {
+    background: linear-gradient(45deg, #838383, #8f8f8f);
+}
+
+.info-box {
+    background: linear-gradient(135deg, #8b8b8b, #585858);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-box span.label {
+    color: #e9e9e9;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.info-box span.value {
+    color: #fff;
+    font-size: 14px;
+}
+.audio-player {
+    background: linear-gradient(135deg, #8b8b8b, #585858);
+    border: 2px solid #c7c7c7;
+    border-radius: 16px;
+    padding: 16px 20px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.audio-player:hover {
+    transform: scale(1.02);
+}
+
+.audio-player h3 {
+    color: #b58fff;
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.audio-player h3::before {
+    content: "🎧";
+    font-size: 18px;
+}
+
+audio {
+    width: 100%;
+    border-radius: 12px;
+    outline: none;
+}
+
+audio::-webkit-media-controls-panel {
+    background: linear-gradient(135deg, #e4e4e4, #9e9e9e);
+    border-radius: 12px;
+}
+
+#duracionLlamada {
+    background-color: #3b3b3b;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+/* Botón moderno */
+.boton-moderno {
+    display: inline-block;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #868686, #585858);
+    padding: 8px 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.25s ease;
+}
+
+.boton-moderno:hover {
+    background: linear-gradient(135deg, #838383, #8f8f8f);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.boton-moderno:active {
+    transform: scale(0.97);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* ✨ Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 1. Contenedor principal de la caja de transcripción */
+.transcripcion-display-container {
+    margin: 20px 0; /* Agrega espacio por encima y por debajo del bloque */
+}
+
+/* 2. Caja de la Transcripción (Simula un log o área de visualización) */
+.transcripcion-display {
+    min-height: 150px; /* Altura mínima para que se vea como una caja */
+    max-height: 150px;
+    overflow-y: auto; /* Permite scroll si la transcripción es muy larga */
+    padding: 15px;
+    border-radius: 12px;
+    background-color: #0d0d0d; /* Fondo muy oscuro, casi negro */
+    border: 1px solid #444; /* Borde sutil */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra interior para efecto de profundidad */
+    line-height: 1.6;
+    font-family: 'Consolas', 'Courier New', monospace; /* Fuente de tipo 'log' o 'terminal' */
+    color: #e9e9e9; /* Color claro para el texto */
+    font-size: 15px;
+}
+
+/* 3. Estilo para el mensaje inicial 'Presiona...' */
+#presiona {
+    font-style: italic; /* Lo hace ver como un mensaje de estado */
+    color: #888; /* Color gris suave */
+    
+    /* Resetear estilos previos (inline-block, background, box-shadow) */
+    display: block; 
+    background: none; 
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    font-weight: normal;
+    font-family: inherit;
+}
+
+/* 4. Estilo para el resultado de la transcripción */
+#resultadoTranscripcion.resultado-texto {
+    white-space: pre-wrap; /* Mantiene saltos de línea y formato */
+    line-height: 1.6;
+    font-size: 15px;
+    color: #dbdbdb; /* El color claro que ya tenías */
+    font-weight: normal; /* Menos negrita, ya que está en una caja de log */
+    margin: 0; /* Asegura que no tenga márgenes molestos */
+    font-family: inherit;
+    animation: fadeInUp 0.8s ease forwards; /* Agregamos una animación de entrada */
+}
+
+/* === BLOQUE CLASIFICACIÓN (ACTUALIZADO Y AGRANDADO) === */
+.clasificacion-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #8b8b8b, #585858);
+    padding: 25px 20px;
+    border-radius: 18px;
+    width: 220px;              /* Card más grande */
+    transform: scale(1.05);    /* Le da presencia */
+}
+
+.circulo-clasificacion {
+    position: relative;
+    width: 120px;              /* círculo más grande */
+    height: 120px;
+}
+
+.progress-ring {
+    width: 120px !important;
+    height: 120px !important;
+}
+
+.progress-ring circle {
+    fill: none;
+    stroke-width: 10;          /* más grueso */
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+/* Fondo gris del círculo */
+.progress-ring-bg {
+    stroke: #2c2c2c;
+}
+
+/* Parte que se rellena dinámicamente */
+.progress-ring-fill {
+    stroke: #00ff00;
+    stroke-dasharray: 282;     /* 2π * r (r=45) */
+    stroke-dashoffset: 282;
+    transition: stroke-dashoffset 1s ease, stroke 0.5s ease;
+}
+
+.numero-clasificacion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 38px;           /* más grande */
+    font-weight: bold;
+    color: white;
+}
+
+.nombre-clasificacion {
+    margin-top: 15px;
+    font-size: 20px;           /* más grande */
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 4px black;
+}
+
+/* === LAYOUT COMPLETO (FULL WIDTH) === */
+.fila-detalle {
+    display: flex;
+    justify-content: space-between; /* datos izq - valoración der */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* Columna izquierda: datos */
+.columna-datos {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Columna derecha: valoración */
+.columna-clasificacion {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Ajuste de compatibilidad */
+.clasificacion-box {
+    text-align: center;
+}
+
+
+
+.separador {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+  opacity: 0.4;
+}

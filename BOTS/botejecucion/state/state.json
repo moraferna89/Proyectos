@@ -1,0 +1,23 @@
+{
+  "running": true,
+  "symbol": "EURUSD",
+  "timeframe": "M5",
+  "last_update": "2026-06-16 19:25:02",
+  "last_bar_time": "2026-06-16 22:20:00",
+  "last_close": 1.16103,
+  "last_signal": "HOLD",
+  "buy_prob": 0.0294,
+  "sell_prob": 0.0432,
+  "last_action": "held",
+  "last_rsi": 53.84,
+  "last_atr": 0.000171,
+  "balance": 536.36,
+  "total_trades": 0,
+  "wins": 0,
+  "losses": 0,
+  "win_rate": 0.0,
+  "total_profit": 0,
+  "avg_profit": 0,
+  "best_trade": 0,
+  "worst_trade": 0
+}

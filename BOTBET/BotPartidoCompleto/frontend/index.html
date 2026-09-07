@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GolSignal</title>
+  <link rel="stylesheet" href="/static/styles/main.css" />
+</head>
+<body>
+
+  <!-- ── Splash Screen ── -->
+  <div id="splash" class="drag-region">
+
+    <div class="win-controls no-drag">
+      <button class="tb-btn tb-min"   onclick="minimizeWindow()" title="Minimizar">&#x2212;</button>
+      <button class="tb-btn tb-close" onclick="closeWindow()"    title="Cerrar">&#x2715;</button>
+    </div>
+
+    <img src="/static/assets/logo_cartas.png"
+         class="splash-logo-img"
+         alt="GolSignal"
+         onerror="this.style.display='none'; document.getElementById('splash-ball-fb').style.display='block'" />
+    <div class="splash-ball" id="splash-ball-fb" style="display:none">⚽</div>
+
+    <h1 class="splash-title">
+      <span class="gol-letter">G</span>
+      <span class="gol-letter">O</span>
+      <span class="gol-letter">L</span>
+      <span class="signal-letter">S</span>
+      <span class="signal-letter">I</span>
+      <span class="signal-letter">G</span>
+      <span class="signal-letter">N</span>
+      <span class="signal-letter">A</span>
+      <span class="signal-letter">L</span>
+    </h1>
+
+    <p class="splash-sub">Señales de Fútbol con IA</p>
+
+    <div class="splash-btn-wrap no-drag">
+      <button class="splash-btn" id="btn-inicio" onclick="launchApp()">Inicio</button>
+    </div>
+
+  </div>
+
+  <!-- ── App principal ── -->
+  <div id="app" class="app-hidden">
+
+    <header class="drag-region">
+      <div class="header-left">
+        <img src="/static/assets/logo_cartas.png"
+             class="header-logo-img"
+             alt="GolSignal"
+             onerror="this.style.display='none'" />
+        <div class="logo">
+          <span class="logo-gol">GOL</span><span class="logo-signal">SIGNAL</span>
+        </div>
+        <div class="subtitle">Señales de Fútbol con IA</div>
+      </div>
+      <div class="header-right no-drag">
+        <button id="btn-analyze" onclick="runAnalysis()">
+          <span class="btn-icon">▶</span> Analizar ahora
+        </button>
+        <button id="btn-telegram" class="tg-toggle" onclick="toggleScheduler()" title="Señales Telegram">
+          <span class="tg-icon">✈</span>
+          <span id="tg-label">...</span>
+        </button>
+        <div class="win-controls">
+          <button class="tb-btn tb-min"   onclick="minimizeWindow()" title="Minimizar">&#x2212;</button>
+          <button class="tb-btn tb-close" onclick="closeWindow()"    title="Cerrar">&#x2715;</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="stats-row" id="stats" style="display:none">
+        <div class="stat-card">
+          <span class="stat-value" id="stat-found">0</span>
+          <span class="stat-label">Partidos encontrados</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="stat-filtered">0</span>
+          <span class="stat-label">Filtrados (1.4–1.8)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="stat-combos">0</span>
+          <span class="stat-label">Combinaciones generadas</span>
+        </div>
+      </section>
+
+      <div id="status-msg" class="status-idle">
+        <span class="idle-icon">⚽</span>
+        Presiona <strong>Analizar ahora</strong> para comenzar.
+      </div>
+
+      <div id="sort-bar" style="display:none">
+        <span class="sort-label">Ordenar por</span>
+        <button class="sort-btn active" id="sort-score" onclick="setSort('score')">Score</button>
+        <button class="sort-btn"        id="sort-date"  onclick="setSort('date')">Fecha</button>
+      </div>
+
+      <section id="results"></section>
+    </main>
+
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

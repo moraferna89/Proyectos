@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Admin</title>
+    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+    <script src="../../js/admin/admin.js"></script>
+    <link rel="stylesheet" href="../../css/admin/admin.css">
+    <link rel="stylesheet" href="../../css/admin/scrollbar.css">
+</head>
+
+<body>
+    <h1>Panel de Administración</h1>
+    <div class="panel-container">
+        <!-- 👔 Card de Ejecutivos -->
+        <div class="card">
+            <h2>Ejecutivos</h2>
+            <button id="btn-agregar-ejecutivo">Agregar Ejecutivo</button>
+            <button id="btn-editar-ejecutivo">Editar Ejecutivo</button>
+            <button id="btn-eliminar-ejecutivo">Eliminar Ejecutivo</button>
+        </div>
+        <!-- 👥 Card de Clientes -->
+        <div class="card">
+            <h2>Clientes</h2>
+            <button id="btn-agregar-cliente">Agregar Cliente</button>
+            <button id="btn-editar-cliente">Editar Cliente</button>
+            <button id="btn-eliminar-cliente">Eliminar Cliente</button>
+        </div>
+
+        <!-- 👥 Card de Supervisores -->
+        <div class="card">
+            <h2>Supervisores</h2>
+            <button id="btn-agregar-supervisor">Agregar Supervisor</button>
+            <button id="btn-editar-supervisor">Editar Supervisor</button>
+            <button id="btn-eliminar-supervisor">Eliminar Supervisor</button>
+        </div>
+
+        <!-- 📞 Card de Llamadas -->
+        <div class="card">
+            <h2>Llamadas</h2>
+            <button id="btn-agregar-llamada">Agregar Llamada</button>
+            <button id="btn-eliminar-llamada">Eliminar Llamada</button>
+        </div>
+        
+
+        <!-- ⚙️ Card de Configuración -->
+        <div class="card">
+            <h2>Reportes</h2>
+            <button id="btn-reporte-llamadas">Reportes Llamadas</button>
+            <button id="btn-reporte-clientes">Reportes Clientes</button>
+            <button id="btn-reporte-ejecutivos">Reportes Ejecutivos</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
